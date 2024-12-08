@@ -1,5 +1,5 @@
 {
-	"name": "Greenpedia",
+	"name": "al-wiki",
 	"version": "1.0.0",
 	"private": true,
 	"scripts": {
@@ -24,6 +24,6 @@
 	"type": "module",
 	"dependencies": {
 		"@sveltejs/adapter-static": "^3.0.6",
-		"sass": "^1.77.6",
+		"sass": "^1.77.6"
 	}
 }
