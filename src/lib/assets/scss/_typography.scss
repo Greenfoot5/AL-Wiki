@@ -1,0 +1,95 @@
+@use './vars';
+
+:is(h1, h2, h3, h4, h5, h6) {
+  margin: 1rem 0 1rem;
+  line-height: 1.1;
+  font-family: var(--accentFont), serif;
+  font-weight: bold;
+  color: var(--nord-frost-1);
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin: 0 0 3rem;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 1rem;
+
+  &::after {
+    content: '';
+    height: 0.1em;
+    background: var(--nord-frost-0);
+    width: 100%;
+    margin-left: -100%;
+    margin-right: -100%;
+    position: absolute;
+    bottom: 0;
+  }
+
+  @media (max-width: vars.$smMax) {
+    font-size: 1.6rem;
+  }
+}
+
+h2 {
+  font-size: 2.0rem;
+
+  @media (max-width: vars.$smMax) {
+    font-size: 1.4rem;
+  }
+}
+
+h3 {
+  font-size: 1.8rem;
+
+  @media (max-width: vars.$smMax) {
+    font-size: 1.2rem;
+  }
+}
+
+h4 {
+  font-size: 1.6rem;
+
+  @media (max-width: vars.$smMax) {
+    font-size: 1rem;
+  }
+}
+
+h5 {
+  font-size: 1.35rem;
+
+  @media (max-width: vars.$smMax) {
+    font-size: 0.95rem;
+  }
+}
+
+h6 {
+  font-size: 1.1rem;
+
+  @media (max-width: vars.$smMax) {
+    font-size: 0.8rem;
+  }
+}
+
+a {
+  color: var(--nord-9);
+  text-decoration-thickness: 1px;
+  text-decoration-color: var(--nord-frost-2);
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 1.5rem;
+
+  ul {
+    list-style-type: circle;
+  }
+
+  ::marker {
+    color: var(--nord-frost-2);
+  }
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
