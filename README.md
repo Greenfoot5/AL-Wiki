@@ -23,4 +23,4 @@ You can preview the production build with `npm run preview`.
 
 ## Credits
 - Kaos IV for making the game
-- Matthias for making the beginner's guide
+- Matthias for making the beginner's guide and a [great spreadsheet](https://docs.google.com/spreadsheets/d/140xLQmoTO4oDc4qHDPrF6K6ah_WoKlMQGbG6Vj4qMKc)
