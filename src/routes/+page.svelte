@@ -9,11 +9,9 @@
 </svelte:head>
 
 <Header />
-<div>
+<div style="margin: 2em;">
 	<a href="season-timer">Season Timer</a><br />
-	<Loader selected="t"></Loader>
-
-<!--	<a href="old-skills2.html">Skill Calculator V2 - in active development so this may be very unstable if available at all!</a><br />-->
+	<a href="codes">Codes</a>
 </div>
 
 
