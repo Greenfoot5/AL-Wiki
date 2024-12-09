@@ -8,7 +8,7 @@
 
 <div class="body">
     <h1>Best in slot</h1>
-    <p>This is a list of the best stat rolls for each T3 items in the game.
+    <p>This is a list of the best stat rolls for each T3 item drop in the game.
         Some stats are unknown, marked with <code>???</code>.
         Some stats are guesses and need confirmation, these have <code>?</code> after the value.
         Please let Greenfoot5 know either in-game or via Discord if you've got any missing data or have items with higher values than what's listed here!
