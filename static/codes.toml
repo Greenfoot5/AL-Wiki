@@ -11,7 +11,7 @@ code = "[REDACTED]"
 gold = 100_000
 diamonds = 1_000
 tokens = 100
-title = "Infernal Tester"
+title = "Infernal Fester"
 
 [[active.items]]
 name = "Demon Herald's Cloak"
