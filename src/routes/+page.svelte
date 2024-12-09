@@ -11,7 +11,8 @@
 <Header />
 <div style="margin: 2em;">
 	<a href="season-timer">Season Timer</a><br />
-	<a href="codes">Codes</a>
+	<a href="codes">Codes</a><br />
+	<a href="bis">Best in Slot</a>
 </div>
 
 
