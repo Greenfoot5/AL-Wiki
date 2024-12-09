@@ -7,6 +7,15 @@
     let expired = data.expired;
 </script>
 
+<svelte:head>
+    <!-- Be sure to add your image files and un-comment the lines below -->
+    <title>Redeem Codes</title>
+    <meta data-key="description" name="description" content="A list of all known past, present and future redemption codes">
+    <meta property="og:title" content="Aeon's Legends - Redeem Codes" />
+    <meta property="og:description" content="A list of all known past, present and future redemption codes" />
+    <meta property="og:url" content="https://al.alchemix.dev/codes" />
+</svelte:head>
+
 <div class="title">
     <h1>Aeon's Legends Codes</h1>
     <p>You can enter codes into the input box in the settings menu to gain the various rewards</p>

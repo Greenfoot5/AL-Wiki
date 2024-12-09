@@ -11,6 +11,15 @@
     </div>
 </div>
 
+<svelte:head>
+    <!-- Be sure to add your image files and un-comment the lines below -->
+    <title>Redeem Codes</title>
+    <meta data-key="description" name="description" content="Countdown timer to next season end">
+    <meta property="og:title" content="Aeon's Legends - Season Countdown" />
+    <meta property="og:description" content="Countdown timer to next season end" />
+    <meta property="og:url" content="https://al.alchemix.dev/season-timer" />
+</svelte:head>
+
 <style>
     .container {
         text-align: center;

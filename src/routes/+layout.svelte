@@ -27,6 +27,12 @@
      **/
 </script>
 
+<svelte:head>
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Greenpedia" />
+    <meta property="og:locale" content="en_GB" />
+</svelte:head>
+
 
 <!--
 	The below markup is used on every page in the site. The <slot> is where the page's

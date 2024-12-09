@@ -5,7 +5,14 @@
 </script>
 
 <svelte:head>
-	<title>{siteTitle}</title>
+	<svelte:head>
+		<!-- Be sure to add your image files and un-comment the lines below -->
+		<title>{siteTitle}</title>
+		<meta data-key="description" name="description" content="Aeon's Legends Wiki Thingy">
+		<meta property="og:title" content="Greenpedia - Aeon's Legends" />
+		<meta property="og:description" content="Aeon's Legends Wiki Thingy" />
+		<meta property="og:url" content="https://al.alchemix.dev/" />
+	</svelte:head>
 </svelte:head>
 
 <Header />
