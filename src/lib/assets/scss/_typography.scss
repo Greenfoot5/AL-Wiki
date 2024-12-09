@@ -92,3 +92,9 @@ ul {
 li {
   margin-bottom: 0.25rem;
 }
+
+code {
+  background: var(--nord-overlay);
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.2rem;
+}

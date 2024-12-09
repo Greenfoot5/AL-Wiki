@@ -73,12 +73,6 @@
         margin-top: 0;
     }
 
-    code {
-        background: var(--nord-overlay);
-        padding: 0.1rem 0.3rem;
-        border-radius: 0.2rem;
-    }
-
     p {
         line-height: 0.75em;
         margin-top: 0.2em;
