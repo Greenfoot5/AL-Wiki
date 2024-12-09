@@ -93,7 +93,7 @@
 
         <details style="margin: 1em 2em;">
             <summary><h3>Shield</h3></summary>
-            <BISArmourTable item={data.hand.shield} />
+            <BISArmourTable item={data.shield} />
         </details>
     </details>
 </div>

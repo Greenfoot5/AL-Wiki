@@ -467,32 +467,6 @@ dex = [0, 0]
 int = [6, "7?"]
 vit = [4, "5?"]
 
-# Hand
-## Shield
-[hand.shield.rare]
-armour = [9, 19]
-magic = [6, 16]
-str = [0, 1]
-dex = [0, 1]
-int = [0, 1]
-vit = [4, 5]
-
-[hand.shield.epic]
-armour = [10, 20]
-magic = [6, 16]
-str = [0, 1]
-dex = [0, 1]
-int = [0, 1]
-vit = [4, 5]
-
-[hand.shield.legendary]
-armour = [11, 21]
-magic = [7, 17]
-str = [0, 1]
-dex = [0, 1]
-int = [0, 1]
-vit = [4, 5]
-
 # Cloak
 [cloak.rare]
 armour = [2, "12?"]
@@ -517,3 +491,35 @@ str = [9, 11]
 dex = [9, 11]
 int = [9, 11]
 vit = [9, 11]
+
+# Hand
+## Shield
+[shield.rare]
+armour = [9, 19]
+magic = [6, 16]
+str = [0, 1]
+dex = [0, 1]
+int = [0, 1]
+vit = [4, 5]
+
+[shield.epic]
+armour = [10, 20]
+magic = [6, 16]
+str = [0, 1]
+dex = [0, 1]
+int = [0, 1]
+vit = [4, 5]
+
+[shield.legendary]
+armour = [11, 21]
+magic = [7, 17]
+str = [0, 1]
+dex = [0, 1]
+int = [0, 1]
+vit = [4, 5]
+
+## Melee
+### Sword
+### Axe
+## Bow
+## Staff
