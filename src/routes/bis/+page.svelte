@@ -2,6 +2,7 @@
     import Rarity from "$lib/components/Rarity.svelte";
     import BISArmourRow from "$lib/components/BISArmourRow.svelte";
     import BISArmourTable from "$lib/components/BISArmourTable.svelte";
+    import BISWeaponTable from "$lib/components/BISWeaponTable.svelte";
 
     let { data } = $props();
 </script>
@@ -78,17 +79,23 @@
         <summary><h2>Hand</h2></summary>
         <details style="margin: 1em 2em;">
             <summary><h3>Melee</h3></summary>
-
-        </details>
-
-        <details style="margin: 1em 2em;">
-            <summary><h3>Staff</h3></summary>
-
+            <BISWeaponTable item={data.melee.sword} caption="Sword (one-handed)" />
+            <div class="hr"></div>
+            <BISWeaponTable item={data.melee.axe} caption="Axe (one-handed)" />
+            <div class="hr"></div>
+            <BISWeaponTable item={data.melee.greatsword} caption="GreatSword (two-handed)" />
+            <div class="hr"></div>
+            <BISWeaponTable item={data.melee.greataxe} caption="GreatAxe (two-handed)" />
         </details>
 
         <details style="margin: 1em 2em;">
             <summary><h3>Bow</h3></summary>
+            <BISWeaponTable item={data.bow.bow} caption="Bow (two-handed)" />
+        </details>
 
+        <details style="margin: 1em 2em;">
+            <summary><h3>Staff</h3></summary>
+            <BISWeaponTable item={data.staff.staff} caption="Staff (two-handed)" />
         </details>
 
         <details style="margin: 1em 2em;">
