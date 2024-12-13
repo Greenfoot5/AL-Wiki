@@ -61,7 +61,7 @@
     </details>
 
     <details>
-        <summary><h2>Gloves</h2></summary>
+        <summary><h2>Hands</h2></summary>
         <BISArmourTable item={data.gloves.heavy} caption="Heavy" />
         <div class="hr"></div>
         <BISArmourTable item={data.gloves.medium} caption="Medium" />
@@ -70,7 +70,7 @@
     </details>
 
     <details>
-        <summary><h2>Shoes</h2></summary>
+        <summary><h2>Feet</h2></summary>
         <BISArmourTable item={data.shoes.heavy} caption="Heavy" />
         <div class="hr"></div>
         <BISArmourTable item={data.shoes.medium} caption="Medium" />
