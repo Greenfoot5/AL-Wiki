@@ -1,11 +1,16 @@
-expired = []
+[[future]]
+note = "Granted if the Christmas goal is reached"
+code = "Christmas"
+gold = 200_000
+diamonds = 500
+title = "Kindred Spirit"
 
 [[active]]
 code = "AL777"
 diamonds = 500
 gold = 50_000
 
-[[active]]
+[[expired]]
 note = "Granted to internal testers for their hard work"
 code = "[REDACTED]"
 gold = 100_000
@@ -13,20 +18,13 @@ diamonds = 1_000
 tokens = 100
 title = "Infernal Fester"
 
-[[active.items]]
+[[expired.items]]
 name = "Demon Herald's Cloak"
 rarity = "Legendary"
 slot = "Cloak"
 cosmetic = "Red Wings"
 count = 1
 
-[[active.items]]
+[[expired.items]]
 rarity = "Epic"
 count = 3
-
-[[future]]
-note = "Granted if the Christmas goal is reached"
-code = "Christmas"
-gold = 200_000
-diamonds = 500
-title = "Kindred Spirit"

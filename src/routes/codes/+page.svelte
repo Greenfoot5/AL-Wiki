@@ -33,7 +33,9 @@
     {/each}
 
     <h2>Expired</h2>
-    None, yet ;)
+    {#each expired as code}
+        <Code code={code} />
+    {/each}
 
 </div>
 
