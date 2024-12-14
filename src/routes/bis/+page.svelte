@@ -84,7 +84,7 @@
     </details>
 
     <details>
-        <summary><h2>Hand</h2></summary>
+        <summary><h2>Weapon</h2></summary>
         <details style="margin: 1em 2em;">
             <summary><h3>Melee</h3></summary>
             <BISWeaponTable item={data.melee.sword} caption="Sword (one-handed)" />
