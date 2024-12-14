@@ -108,7 +108,7 @@
 
         <details style="margin: 1em 2em;">
             <summary><h3>Shield</h3></summary>
-            <BISArmourTable item={data.shield} />
+            <BISArmourTable item={data.shield} caption="Shield (off-hand only)"/>
         </details>
     </details>
 </div>
