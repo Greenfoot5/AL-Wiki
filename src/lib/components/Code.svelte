@@ -5,6 +5,9 @@
 </script>
 
 <code>{code.code}</code>
+{#if code.hasOwnProperty("expire")}
+    &nbsp;- Expired On: <code>{code.expire.getUTCDate()}/{code.expire.getUTCMonth()}/{code.expire.getUTCFullYear()}</code>
+{/if}
 {#if code.hasOwnProperty("note")}
     <p class="note">{code.note}</p>
 {/if}

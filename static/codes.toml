@@ -17,6 +17,7 @@ gold = 100_000
 diamonds = 1_000
 tokens = 100
 title = "Infernal Fester"
+expire = 2024-12-08
 
 [[expired.items]]
 name = "Demon Herald's Cloak"
