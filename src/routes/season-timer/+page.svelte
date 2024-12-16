@@ -2,7 +2,7 @@
     import Countdown from "$lib/components/Countdown.svelte";
     import Loader from "$lib/components/Loader.svelte";
 </script>
-
+<div style="margin: 2em; position: absolute"><a href="/">Home</a></div>
 <div class="container">
     <div class="content">
         <Loader selected="triangle" --duration="3s"></Loader>

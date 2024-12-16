@@ -16,6 +16,8 @@
     <meta property="og:url" content="https://al.alchemix.dev/codes" />
 </svelte:head>
 
+<div style="margin: 1em 2em;"><a href="/">Home</a></div>
+
 <div class="title">
     <h1>Aeon's Legends Codes</h1>
     <p>You can enter codes into the input box in the settings menu to gain the various rewards</p>
