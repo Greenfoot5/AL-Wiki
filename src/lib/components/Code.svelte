@@ -6,7 +6,9 @@
 
 <code>{code.code}</code>
 {#if code.hasOwnProperty("expire")}
-    &nbsp;- Expired On: <code>{code.expire.getUTCDate()}/{code.expire.getUTCMonth()}/{code.expire.getUTCFullYear()}</code>
+    - Expired: <code>{code.expire.getUTCDate()}/{code.expire.getUTCMonth()}/{code.expire.getUTCFullYear()}</code>
+{:else if code.hasOwnProperty("available")}
+    - Available From: <code>{code.available.getUTCDate()}/{code.available.getUTCMonth()}/{code.available.getUTCFullYear()}</code>
 {/if}
 {#if code.hasOwnProperty("note")}
     <p class="note">{code.note}</p>
@@ -19,6 +21,9 @@
     <p style="color: var(--nord-frost-2)">Diamonds: {code.diamonds.toLocaleString()}</p>
     {#if code.hasOwnProperty("tokens")}
         <p>Battle Tokens: {code.tokens}</p>
+    {/if}
+    {#if code.hasOwnProperty("synergy_stones")}
+        <p style="color: var(--nord-frost-0)">Synergy Stones: {code.synergy_stones}</p>
     {/if}
     {#if code.hasOwnProperty("items")}
         <h5>Items:</h5>
@@ -41,6 +46,23 @@
 
                     {#if item.hasOwnProperty("cosmetic")}
                         <p class="note">Cosmetic: {item.cosmetic}</p>
+                    {/if}
+                </li>
+            {/each}
+        </ul>
+    {/if}
+    {#if code.hasOwnProperty("materials")}
+        <h5>Materials:</h5>
+        <ul>
+            {#each code.materials as material}
+                <li>
+                    <Rarity rarity={material.rarity} />
+
+                    {#if material.hasOwnProperty("name")}
+                        {material.name}
+                    {/if}
+                    {#if material.count > 1}
+                        × {material.count}
                     {/if}
                 </li>
             {/each}

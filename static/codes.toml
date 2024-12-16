@@ -4,6 +4,16 @@ code = "Christmas"
 gold = 200_000
 diamonds = 500
 title = "Kindred Spirit"
+tokens = 100
+synergy_stones = 20
+available = 2024-12-24
+
+[[future.materials]]
+rarity = "Epic"
+count = 20
+[[future.materials]]
+rarity = "Legendary"
+count = 5
 
 [[active]]
 code = "AL777"
