@@ -14,6 +14,7 @@
 
 <Header />
 <div style="margin: 2em;">
+	<a href="faq">Frequently Asked Questions (and other useful info)</a> <br />
 	<a href="season-timer">Season Timer</a><br />
 	<a href="codes">Codes</a><br />
 	<a href="bis">Best in Slot</a>
