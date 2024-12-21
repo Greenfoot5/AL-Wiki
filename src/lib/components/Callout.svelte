@@ -1,8 +1,7 @@
 <script lang="ts">
-    import type { Snippet } from 'svelte';
     let { variant, children }: {variant: string, children: Function} = $props();
 
-    let css_class = "callout";
+    let css_class: string = "callout";
     if (variant?.toLowerCase().startsWith("i"))
         css_class += " info";
     else if (variant?.toLowerCase().startsWith("w"))
@@ -69,10 +68,10 @@
     }
 
     .info {
-        border-color: var(--nord-frost-1);
+        border-color: var(--nord-frost-2);
 
         svg {
-            color: var(--nord-frost-1);
+            color: var(--nord-frost-2);
         }
     }
 
