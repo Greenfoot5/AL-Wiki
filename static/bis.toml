@@ -477,20 +477,20 @@ int = [7, "9?"]
 vit = [7, "9?"]
 
 [cloak.epic]
-armour = [3, "13?"]
-magic = [3, "13?"]
+armour = [2, "13?"]
+magic = [2, "13?"]
 str = [8, "10?"]
 dex = [8, "10?"]
 int = [8, "10?"]
 vit = [8, "10?"]
 
 [cloak.legendary]
-armour = [4, 14]
-magic = [4, 14]
-str = [9, 12]
-dex = [9, 12]
-int = [9, 12]
-vit = [9, 12]
+armour = [2, 12]
+magic = [2, 12]
+str = [8, 10]
+dex = [8, 10]
+int = [8, 10]
+vit = [8, 10]
 
 # Hand
 ## Shield
