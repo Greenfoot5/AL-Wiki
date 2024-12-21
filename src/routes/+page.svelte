@@ -1,7 +1,6 @@
 <script>
 	import { siteTitle } from '$lib/config';
 	import Header from "$lib/components/Header.svelte";
-	import Loader from "$lib/components/Loader.svelte";
 </script>
 
 <svelte:head>
