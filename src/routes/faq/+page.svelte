@@ -5,9 +5,9 @@
 <svelte:head>
     <!-- Be sure to add your image files and un-comment the lines below -->
     <title>FAQs</title>
-    <meta data-key="description" name="description" content="Frequently Asked Questions">
+    <meta data-key="description" name="description" content="Frequently Asked Questions (and other useful info)">
     <meta property="og:title" content="Aeon's Legends - FAQs" />
-    <meta property="og:description" content="Frequently Asked Questions" />
+    <meta property="og:description" content="Frequently Asked Questions (and other useful info)" />
     <meta property="og:url" content="https://al.alchemix.dev/faq" />
 </svelte:head>
 
