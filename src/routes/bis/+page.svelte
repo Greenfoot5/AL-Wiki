@@ -1,6 +1,7 @@
 <script>
     import BISArmourTable from "$lib/components/BISArmourTable.svelte";
     import BISWeaponTable from "$lib/components/BISWeaponTable.svelte";
+    import Callout from "$lib/components/Callout.svelte";
 
     let { data } = $props();
 </script>
@@ -25,6 +26,8 @@
         Please let Greenfoot5 know either in-game or via Discord if you've got any missing data or have items with higher values than what's listed here!
     </p>
     <p>T3 items can be upgraded up to 10 times. Each stat lists first the value without any upgrades, then the value at max upgrade.</p>
+
+    <Callout>It was originally possible to obtain items with +1 in their non-focus stats (dex & int for heavy, str & int for medium and str & dex for light). This was later changed and instead base BIS values for other stats on the items were increased. While it's not possible to gain +1 in non-focus stats the original drops were not removed.</Callout>
 
     <details>
         <summary><h2>Head</h2></summary>
@@ -82,6 +85,7 @@
 
     <details>
         <summary><h2>Cloak</h2></summary>
+        <Callout>The Demon's Herald Cloak <a href="../codes#internal-tester">granted to internal testers</a> has a base of 9 on Str/Dex/Int/Vit with +3 granted at max level. The stats below are BIS for items dropped outside of codes.</Callout>
         <BISArmourTable item={data.cloak} />
     </details>
 
@@ -146,9 +150,5 @@
         justify-content: center;
         margin: 1em auto;
         bottom: 0;
-    }
-
-    .home {
-        margin-bottom: 1em;
     }
 </style>
