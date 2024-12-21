@@ -85,7 +85,7 @@
 
     <details>
         <summary><h2>Cloak</h2></summary>
-        <Callout variant="warning">The Demon's Herald Cloak <a href="../codes">granted to internal testers</a> has a base of 9 on Str/Dex/Int/Vit with +3 granted at max level. The stats below are BIS for items dropped outside of codes.</Callout>
+        <Callout variant="warning">The Demon's Herald Cloak <a href="/codes">granted to internal testers</a> has a base of 9 on Str/Dex/Int/Vit with +3 granted at max level. The stats below are BIS for items dropped outside of codes.</Callout>
         <BISArmourTable item={data.cloak} />
     </details>
 
