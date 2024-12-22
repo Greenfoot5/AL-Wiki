@@ -45,6 +45,18 @@
         When increasing the difficulty, i.e. from <span style="color: var(--nord-frost-2)">normal (blue)</span> ➠ <span style="color: var(--nord-yellow)">hard (yellow)</span> ➠ <span style="color: var(--nord-red)">torment (red)</span>, drop rates for <Rarity rarity="rare"/>/<Rarity rarity="epic"/>/<Rarity rarity="legendary"/> gear increases as well as xp & gold rewards.
     </details>
 
+    <details id="divisions">
+        <summary><h2>What are the different PvP ranks?</h2></summary>
+        Each rank is separated by 250 elo, and upon reaching a new rank (and winning a battle) you gain a title with the same name of your rank.
+        Old titles do not disappear upon gaining new ones.<br />
+        <img src="divisions.png"
+             alt="The PVP ranks are split into five divisions with four steps in each.
+             The five divisions are 'Scout', 'Knight', 'Centurion', 'Iron Guard' and 'Crusader'
+             Each step is the name of the division and then a suffix.
+             The first step has no suffix, the latter three have 'Custodian', 'Watcher' and 'Signifier' as the suffix."
+             style="max-height: 50%">
+    </details>
+
     <details id="synergies">
         <summary><h2>Synergies</h2></summary>
         Synergies work by granting buffs based on who is in your party.
