@@ -6,8 +6,8 @@ diamonds = 500
 title = "Kindred Spirit"
 tokens = 100
 synergy_stones = 20
-available = 2024-12-24
-expire = 2025-01-01
+# available = 2024-12-24
+# expire = 2025-01-01
 
 [[active.materials]]
 rarity = "Epic"
@@ -20,7 +20,7 @@ count = 5
 code = "AL777"
 diamonds = 500
 gold = 50_000
-expire = 2025-01-01
+# expire = 2025-01-01
 
 [[expired]]
 note = "Granted to internal testers for their hard work"
