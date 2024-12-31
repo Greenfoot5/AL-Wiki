@@ -637,12 +637,12 @@ int = [8, "???"]
 vit = [8, "???"]
 
 [bow.bow.legendary]
-damage = [[11, 13], ["20?", "22?"]]
+damage = [[11, 13], [21, 23]]
 speed = ["3.69?", "3.69?"]
-str = [8, "???"]
-dex = [8, "???"]
-int = [8, "???"]
-vit = [8, "???"]
+str = [8, 10]
+dex = [8, 10]
+int = [8, 10]
+vit = [8, 10]
 
 ## Staff
 [staff.staff.rare]
