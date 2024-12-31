@@ -562,12 +562,12 @@ int = ["5?", "???"]
 vit = ["8?", "???"]
 
 [melee.axe.legendary]
-damage = [["8?", "11?"], ["18?", "21?"]]
+damage = [["10?", "12?"], ["20?", "22?"]]
 speed = [3.5, 3.5]
-str = ["8?", "???"]
-dex = ["8?", "???"]
-int = ["8?", "???"]
-vit = ["8?", "???"]
+str = [8, 10]
+dex = [8, 10]
+int = [8, 10]
+vit = [8, 10]
 
 ### Greatsword
 [melee.greatsword.rare]
