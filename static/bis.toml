@@ -199,7 +199,7 @@ int = [0, 0]
 vit = [4, "5?"]
 
 [chest.medium.epic]
-armour = [11, 21]
+armour = [14, 24]
 magic = ["9?", "19?"]
 str = [0, 0]
 dex = [6, "7?"]
