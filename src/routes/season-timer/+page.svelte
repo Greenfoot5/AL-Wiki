@@ -6,7 +6,7 @@
 <div class="container">
     <div class="content">
         <Loader selected="triangle" --duration="3s"></Loader>
-        <Countdown date={new Date("Jan 1, 2025 00:00:00").getTime()} />
+        <Countdown date={new Date("Feb 1, 2025 00:00:00").getTime()} />
         <Loader selected="triangle" --duration="3s"></Loader>
     </div>
 </div>
