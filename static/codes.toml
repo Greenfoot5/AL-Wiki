@@ -1,6 +1,6 @@
 [[expired]]
 note = "Granted for gaining 100 players at 5+ ELO before Christmas"
-code = "Christmas"
+code = "ALXMAS"
 gold = 200_000
 diamonds = 500
 title = "Kindred Spirit"
@@ -16,11 +16,12 @@ count = 20
 rarity = "Legendary"
 count = 5
 
-[[expired]]
+[[active]]
 code = "AL777"
 diamonds = 500
 gold = 50_000
-expire = 2025-01-01
+#expire = 2025-01-01
+# activated_again = 2025-01-05
 
 [[expired]]
 note = "Granted to internal testers for their hard work"
