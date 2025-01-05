@@ -90,7 +90,7 @@ vit = [4, 5]
 # Shoulders
 ## Heavy
 [shoulders.heavy.rare]
-armour = [13, 23]
+armour = [14, 24]
 magic = [9, 19]
 str = [5, "6?"]
 dex = [0, 0]
