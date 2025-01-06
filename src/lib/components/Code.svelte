@@ -6,7 +6,7 @@
 
 <code>{code.code}</code>
 {#if code.hasOwnProperty("expire")}
-    - Expired: <code>{code.expire.getUTCDate()}/{code.expire.getUTCMonth()}/{code.expire.getUTCFullYear()}</code>
+    - Expired: <code>{code.expire.getUTCDate()}/{code.expire.getUTCMonth() + 1}/{code.expire.getUTCFullYear()}</code>
 {:else if code.hasOwnProperty("available")}
     - Available From: <code>{code.available.getUTCDate()}/{code.available.getUTCMonth() + 1}/{code.available.getUTCFullYear()}</code>
 {/if}
