@@ -85,7 +85,7 @@
 
     <details>
         <summary><h2>Cloak</h2></summary>
-        <Callout variant="warning">The Demon's Herald Cloak <a href="/codes">granted to internal testers</a> has higher stats of Armour/Magic Res 4 ➠ 14 and Str/Dex/Int/Vit 9 ➠ 12. The stats below are BIS for items dropped outside of codes.</Callout>
+        <!--<Callout variant="warning">The Demon's Herald Cloak <a href="/codes">granted to internal testers</a> has higher stats of Armour/Magic Res 4 ➠ 14 and Str/Dex/Int/Vit 9 ➠ 12. The stats below are BIS for items dropped outside of codes.</Callout>-->
         <BISArmourTable item={data.cloak} />
     </details>
 
