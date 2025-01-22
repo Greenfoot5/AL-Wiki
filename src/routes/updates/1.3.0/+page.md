@@ -32,11 +32,7 @@ release: "2025-01-17"
 - Chaos Shower:  `+0%` / `+10%` / `+20%` / `+30%` / `+40%` damage
 
 #### Priest
-<Callout variant="error">
-    The 3rd level of Flash Heal was listed as <code>20%</code> but it's assumed to be <code>-20%</code>.
-</Callout>
-
-- Flash Heal: `-20%` / `-20%` / <code style="color: var(--nord-purple);">-20%</code> / `-20%` / `-20%` heal
+- Flash Heal: `-20%` / `-20%` / `-20%` / `-20%` / `-20%` heal
 - Flash Heal: `+1` second cooldown
 - Holy Explosion: `+10%` / `+10%` / `+15%` / `+15%` / `+20%` damage
 - Holy Explosion: `+10%` / `+10%` / `+15%` / `+15%` / `+20%` heal
