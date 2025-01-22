@@ -27,7 +27,7 @@
     </p>
     <p>T3 items can be upgraded up to 10 times. Each stat lists first the value without any upgrades, then the value at max upgrade.</p>
 
-    <Callout variant="info">It was originally possible to obtain items with +1 in their non-focus stats (dex & int for heavy, str & int for medium and str & dex for light). This was later changed and instead base BIS values for other stats on the items were increased. While it's not possible to gain +1 in non-focus stats the original drops were not removed.</Callout>
+    <Callout variant="warning">Many values are now uncertain thanks to an update of version 1.3.0 where base stats and max stats for many items were changed.</Callout>
 
     <details>
         <summary><h2>Head</h2></summary>
