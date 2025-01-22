@@ -1,7 +1,7 @@
 <script lang="ts">
     let { variant, children }: {variant: string, children: Function} = $props();
 
-    let css_class: string = "callout";
+    let css_class: string = $state("callout");
     if (variant?.toLowerCase().startsWith("i"))
         css_class += " info";
     else if (variant?.toLowerCase().startsWith("w"))
