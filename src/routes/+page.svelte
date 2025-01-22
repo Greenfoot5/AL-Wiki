@@ -14,7 +14,7 @@
 
 <Header />
 <div style="margin: 2em;">
-	<a href="updates/1.3.0">V1.3.0 patch notes</a>
+	<a href="updates/1.3.0">V1.3.0 patch notes</a> <br />
 	<a href="faq">Frequently Asked Questions (and other useful info)</a> <br />
 	<a href="season-timer">Season Timer</a><br />
 	<a href="codes">Codes</a><br />
