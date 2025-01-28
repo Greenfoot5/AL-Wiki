@@ -27,7 +27,7 @@
     </p>
     <p>T3 items can be upgraded up to 10 times. Each stat lists first the value without any upgrades, then the value at max upgrade.</p>
 
-    <Callout variant="warning">Many values are now uncertain thanks to a recent update, <a href="/updates/1.3.0">version 1.3.0</a>, where base stats and max stats for many items were changed.</Callout>
+    <Callout variant="warning">Many values are now uncertain thanks to a recent update, <a href="/updates/1.3">version 1.3.0</a>, where base stats and max stats for many items were changed.</Callout>
 
     <details>
         <summary><h2>Head</h2></summary>

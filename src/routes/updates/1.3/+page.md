@@ -1,5 +1,5 @@
 ---
-title: Version 1.3.0
+title: Version 1.3
 release: "2025-01-17"
 ---
 
