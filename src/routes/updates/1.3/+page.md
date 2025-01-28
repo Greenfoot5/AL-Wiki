@@ -64,3 +64,14 @@ release: "2025-01-17"
 - PvP matchmaking would sometimes priorotize PCs rather than creating a mercenary of your chosen class
 - Fixed Ranger's skill "Rapid Shot, Greater", now it will fire the correct amount of rounds, faster
 - Fixed Ranger's skill "Bouncing Shot" that would trigger a SFX bug
+
+# 1.3.1
+
+## Fixes
+- Fixed an issue where the client wouldn't update after some actions, seemingly being disconnected
+
+# 1.3.2
+
+## Fixes
+- Fixed an issue where claimed mail wouldn't show as claimed
+- Fixed an issue where progress bars for quests & battle pass weren't showing up
