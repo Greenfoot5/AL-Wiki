@@ -20,12 +20,11 @@
 
 <div class="body">
     <h1>Best in slot</h1>
-    <p>This is a list of the best stat rolls for each T3 item drop in the game.
-        Some stats are unknown, marked with <code>???</code>.
-        Some stats are guesses and need confirmation, these have <code>?</code> after the value.
-        Please let Greenfoot5 know either in-game or via Discord if you've got any missing data or have items with higher values than what's listed here!
+    <p>This is a list of the best stat rolls for each T3.5 item drop in the game.
+        Unknown stats are replaced with <code>???</code> and stats with <code>?</code> after require confirmation.
+        Please let Greenfoot5 know either in-game or via Discord if you've got any missing data, or if you feel some data is wrong1
     </p>
-    <p>T3 items can be upgraded up to 10 times. Each stat lists first the value without any upgrades, then the value at max upgrade.</p>
+    <p>Items can be upgraded up to 10 times. Each stat lists first the value without any upgrades, then the value at max upgrade.</p>
 
     <Callout variant="warning">Many values are now uncertain thanks to a recent update, <a href="/updates/1.3">version 1.3.0</a>, where base stats and max stats for many items were changed.</Callout>
 
@@ -85,7 +84,6 @@
 
     <details>
         <summary><h2>Cloak</h2></summary>
-        <!--<Callout variant="warning">The Demon's Herald Cloak <a href="/codes">granted to internal testers</a> has higher stats of Armour/Magic Res 4 ➠ 14 and Str/Dex/Int/Vit 9 ➠ 12. The stats below are BIS for items dropped outside of codes.</Callout>-->
         <BISArmourTable item={data.cloak} />
     </details>
 
