@@ -89,6 +89,7 @@
 
     <details>
         <summary><h2>Weapon</h2></summary>
+<!--        <p>All values have been rounded to 2 decimal places. Only whole numbers are used in-game</p>-->
         <Callout>When picking a weapon bear in mind if the scaling stats match. On each there's a primary & secondary scaling factor to your damage based on str/dex/int/vit. These can significantly affect your damage if you get them right/wrong.</Callout>
         <details style="margin: 1em 2em;">
             <summary><h3>Melee</h3></summary>
