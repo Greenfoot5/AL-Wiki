@@ -3,16 +3,16 @@
 
     let css_class: string = $state("callout");
     if (variant?.toLowerCase().startsWith("i"))
-        css_class += " info";
+        css_class += " preset-tonal-tertiary";
     else if (variant?.toLowerCase().startsWith("w"))
-        css_class += " warning";
+        css_class += " preset-tonal-warning";
     else if (variant?.toLowerCase().startsWith("e"))
-        css_class += " error";
+        css_class += " preset-tonal-error";
     else if (variant?.toLowerCase().startsWith("s"))
-        css_class += " success";
+        css_class += " preset-tonal-success";
 </script>
 
-<div class={css_class}>
+<div class="bg-surface-500/10 preset-tonal-primary {css_class}">
     {#if variant?.toLowerCase().startsWith("i")}
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
@@ -41,7 +41,6 @@
     @use '$lib/assets/scss/_vars.scss';
 
     .callout {
-        background: var(--nord-overlay);
         padding: 0.5rem 1rem;
         width: calc(100% - 2em);
         max-width: unset;
@@ -52,7 +51,6 @@
         border: 0 solid;
         border-left-width: 5px;
         border-radius: 0.125rem;
-        border-color: var(--nord-frost-0);
 
         @media (min-width: vars.$mdMin) {
             width: calc(100% - 4rem);
@@ -63,39 +61,8 @@
         svg {
             width: 1.5rem;
             height: 1.5rem;
-            margin-bottom: -0.25em
-        }
-    }
-
-    .info {
-        border-color: var(--nord-frost-2);
-
-        svg {
-            color: var(--nord-frost-2);
-        }
-    }
-
-    .warning {
-        border-color: var(--nord-yellow);
-
-        svg {
-            color: var(--nord-yellow);
-        }
-    }
-
-    .error {
-        border-color: var(--nord-red);
-
-        svg {
-            color: var(--nord-red);
-        }
-    }
-
-    .success {
-        border-color: var(--nord-green);
-
-        svg {
-            color: var(--nord-green);
+            //margin-bottom: 0.25em;
+            display: inline;
         }
     }
 </style>
