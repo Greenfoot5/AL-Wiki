@@ -1,15 +1,10 @@
-@use '$lib/assets/scss/typography';
-@use '$lib/assets/scss/colours';
+//@use '$lib/assets/scss/typography';
 @use '$lib/assets/scss/vars';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-*:focus {
-  outline: 2px solid var(--nord-purple);
-  outline-offset: 2px;
-}
+//*:focus {
+//  outline: 2px solid var(--nord-purple);
+//  outline-offset: 2px;
+//}
 
 *,
 *:before,
@@ -26,16 +21,10 @@ main:focus {
 body {
   margin: 0;
   min-height: 100vh;
-  color: var(--nord-text);
   font-family: var(--primaryFont), serif;
-  background: var(--nord-base);
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-size: 1.25rem;
-
-  @media (max-width: vars.$smMax) {
-    font-size: 0.9rem;
-  }
 }
 
 img {

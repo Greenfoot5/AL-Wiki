@@ -1,12 +1,14 @@
-<div class="">
-    <h2 class="header-text">
+<div class="card p-4 text-center flex justify-start items-center">
+    <h2 class="h2">
         Greenpedia
     </h2>
 </div>
 
 <style lang="scss">
     div {
-      background-color: var(--nord-surface);
+        background: color-mix(in oklab, var(--color-surface-50-950) 30%, transparent);
+        box-shadow: 0 0 30px color-mix(in oklab, var(--color-surface-50-950) 30%, transparent) inset;
+        backdrop-filter: blur(16px);
     }
 
     h2 {

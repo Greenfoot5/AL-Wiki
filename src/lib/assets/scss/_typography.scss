@@ -5,7 +5,7 @@
   line-height: 1.1;
   font-family: var(--accentFont), serif;
   font-weight: bold;
-  color: var(--nord-frost-1);
+  //color: var(--nord-frost-1);
 }
 
 h1 {
@@ -71,7 +71,7 @@ h6 {
 }
 
 a {
-  color: var(--nord-9);
+  //color: var(--nord-9);
   text-decoration-thickness: 1px;
   text-decoration-color: var(--nord-frost-2);
 }
@@ -85,7 +85,7 @@ ul {
   }
 
   ::marker {
-    color: var(--nord-frost-2);
+    //color: var(--nord-frost-2);
   }
 }
 
@@ -94,7 +94,7 @@ li {
 }
 
 code {
-  background: var(--nord-surface);
+  //background: var(--nord-surface);
   padding: 0.1rem 0.3rem;
   border-radius: 0.2rem;
 }
