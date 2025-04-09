@@ -1,12 +1,14 @@
 <script>
     import Countdown from "$lib/components/Countdown.svelte";
     import Loader from "$lib/components/Loader.svelte";
+
+    const now = new Date();
+    const current = new Date(now.getFullYear(), now.getMonth() + 1, 1);
 </script>
-<div style="margin: 2em; position: absolute"><a href="/">Home</a></div>
 <div class="container">
     <div class="content">
         <Loader selected="triangle" --duration="3s"></Loader>
-        <Countdown date={new Date("Mar 1, 2025 00:00:00").getTime()} />
+        <Countdown date={current} />
         <Loader selected="triangle" --duration="3s"></Loader>
     </div>
 </div>
@@ -23,7 +25,7 @@
 <style>
     .container {
         text-align: center;
-        height: 100dvh;
+        height: 80dvh;
         width: 100%;
         justify-content: center;
         align-content: center;
