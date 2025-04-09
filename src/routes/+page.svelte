@@ -11,11 +11,6 @@
 	<meta property="og:url" content="https://al.alchemix.dev/" />
 </svelte:head>
 
-<!--<Header />-->
-
-<h2 class="h1 text-center my-16">
-	Greenpedia
-</h2>
 <dl class="space-y-2 ml-8">
 	<div>
 		<dt class="anchor font-bold"><a href="updates/1.3">V1.3 patch notes</a></dt>

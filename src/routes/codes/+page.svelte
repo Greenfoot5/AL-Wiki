@@ -16,18 +16,16 @@
     <meta property="og:url" content="https://al.alchemix.dev/codes" />
 </svelte:head>
 
-<div class="anchor" style="margin: 1em 2em;"><a href="/">Home</a></div>
-
 <div class="title text-center">
     <h1 class="h1 py-4">Aeon's Legends Codes</h1>
     <p class="preset-typo-subtitle">You can enter codes into the input box in the settings menu to gain the various rewards</p>
 </div>
 <div class="body">
-    <h2 class="h2">Future Codes</h2>
-    <p class="note opacity-60">Please note that codes may change on release, some values added for reference</p>
-    {#each future as code}
-        <Code code={code} />
-    {/each}
+<!--    <h2 class="h2">Future Codes</h2>-->
+<!--    <p class="note opacity-60">Please note that codes may change on release, some values added for reference</p>-->
+<!--    {#each future as code}-->
+<!--        <Code code={code} />-->
+<!--    {/each}-->
 
     <h2 class="h2">Active Codes</h2>
     {#each active as code}
