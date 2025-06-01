@@ -57,7 +57,7 @@
                 When increasing the stage number, e.g. 1-3 to 1-4, the xp & gold drops will increase. <br />
                 When increasing the difficulty,
                 i.e. from <span class="text-blue-400">normal (blue)</span> <ArrowBigRightDash class="inline" size={20}/>
-                <span class="text-yellow-500">hard (yellow)</span> <ArrowBigRightDash class="inline" size={14}/>
+                <span class="text-yellow-500">hard (yellow)</span> <ArrowBigRightDash class="inline" size={20}/>
                 <span class="text-red-500">torment (red)</span>,
                 drop rates for <Rarity rarity="rare"/>/<Rarity rarity="epic"/>/<Rarity rarity="legendary"/> gear increases as well as xp & gold rewards.
             {/snippet}
