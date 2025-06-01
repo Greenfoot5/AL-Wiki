@@ -10,9 +10,9 @@
 <svelte:head>
     <!-- Be sure to add your image files and un-comment the lines below -->
     <title>Best in Slot</title>
-    <meta data-key="description" name="description" content="A list of the best stat rolls for each T3 item drop in the game.">
+    <meta data-key="description" name="description" content="A list of the best stat rolls for each T4 item drop in the game.">
     <meta property="og:title" content="Aeon's Legends - Best in Slot" />
-    <meta property="og:description" content="A list of the best stat rolls for each T3 item drop in the game." />
+    <meta property="og:description" content="A list of the best stat rolls for each T4 item drop in the game." />
     <meta property="og:url" content="https://al.alchemix.dev/bis" />
 </svelte:head>
 
