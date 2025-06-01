@@ -42,18 +42,6 @@
 <style lang="scss">
     @use "$lib/assets/scss/_vars.scss";
 
-    .note {
-        color: var(--nord-muted);
-        font-size: 0.9rem;
-        margin-top: 0.4em;
-        margin-left: 0.5em;
-        margin-bottom: 1em;
-
-        @media (max-width: vars.$smMax) {
-            font-size: 0.8rem;
-        }
-    }
-
     .body {
         padding-left: 2em;
         padding-bottom: 2em;
