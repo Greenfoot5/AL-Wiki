@@ -40,8 +40,8 @@
             </Tabs.Panel>
             <Tabs.Panel value="t3">
                 <Callout variant="warning">This page will no longer be actively updated as T4 has been released. Pull requests will still be reviewed.</Callout>
-                <Callout variant="error">Due to a change in the way weapons' data is stored, weapons (excluding shield) will not show. Data is still available
-                    <a class="anchor" href="https://github.com/Greenfoot5/AL-Wiki/blob/master/static/bis_t3.toml">on Github</a>.</Callout>
+                <Callout variant="warning">Due to a change in the way weapons' data is stored, weapon secondary/normal values may be primary/secondary scaled instead (making them higher than possible).
+                The original data has been kept, and is available <a class="anchor" href="https://github.com/Greenfoot5/AL-Wiki/blob/master/static/bis_t3.toml">on Github</a>.</Callout>
                 <BISAccordion data={data.t3} />
             </Tabs.Panel>
         {/snippet}
