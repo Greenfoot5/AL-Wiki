@@ -3,6 +3,7 @@
     import { Accordion } from '@skeletonlabs/skeleton-svelte';
     import BISArmourTable from "$lib/components/BISArmourTable.svelte";
     import BISWeaponTable from "$lib/components/BISWeaponTable.svelte";
+    import Callout from "$lib/components/Callout.svelte";
 
     let opened = $state([]);
     let weapons = $state([]);
@@ -104,6 +105,10 @@
         {#snippet control()}<h2 class="h2">Weapons</h2>{/snippet}
         <!-- Panel -->
         {#snippet panel()}
+            <Callout variant="info">
+                Weapons (except shield) have a scaling attribute, primary/secondary, modifying str/dex/int/vit of the dropped weapon.
+                The stats below show best possible value for the primary/secondary/default (unscaled) attribute, rather than in str/dex/int/vit.
+            </Callout>
             <Accordion {weapons} onValueChange={(e) => (value = e.value)} multiple>
                 <Accordion.Item value="Melee">
                     {#snippet lead()}<Sword class="h4" size={24} strokeWidth={2.5} />{/snippet}
