@@ -11,17 +11,15 @@
     <meta property="og:url" content="https://al.alchemix.dev/faq" />
 </svelte:head>
 
-<div style="margin: 1em 2em;"><a href="/">Home</a></div>
-
 <div class="body">
-    <h1>FAQs</h1>
+    <h1 class="h1">FAQs</h1>
     <p>
         Some questions that get frequently asked or other info that should be shared
     </p>
 
     <details id="codes">
         <summary><h2>Any codes?</h2></summary>
-        <a href="/codes">Check out the codes page on the site</a>
+        <a href="/codes" class="anchor">Check out the codes page on the site</a>
     </details>
 
     <details id="passive-armour">
@@ -42,7 +40,7 @@
         <summary><h2>What affects my drops when challenging harder expeditions?</h2></summary>
         Each map will drop a different tier of gear (i.e. the 2nd map drops T2 gear). <br />
         When increasing the stage number, e.g. 1-3 to 1-4, the xp & gold drops will increase. <br />
-        When increasing the difficulty, i.e. from <span style="color: var(--nord-frost-2)">normal (blue)</span> ➠ <span style="color: var(--nord-yellow)">hard (yellow)</span> ➠ <span style="color: var(--nord-red)">torment (red)</span>, drop rates for <Rarity rarity="rare"/>/<Rarity rarity="epic"/>/<Rarity rarity="legendary"/> gear increases as well as xp & gold rewards.
+        When increasing the difficulty, i.e. from <span class="text-blue-400">normal (blue)</span> ➠ <span class="text-yellow-500">hard (yellow)</span> ➠ <span class="text-red-500">torment (red)</span>, drop rates for <Rarity rarity="rare"/>/<Rarity rarity="epic"/>/<Rarity rarity="legendary"/> gear increases as well as xp & gold rewards.
     </details>
 
     <details id="divisions">
@@ -87,6 +85,6 @@
         font-family: var(--accentFont), serif;
         font-weight: bold;
         font-size: 1.8rem;
-        color: var(--nord-highlight);
+        color: light-dark(var(--heading-font-color), var(--heading-font-color-dark));
     }
 </style>

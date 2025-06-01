@@ -27,4 +27,4 @@
     updateCountdown()
 </script>
 
-<h1 id="timer">{countdown}</h1>
+<h1 class="h1">{countdown}</h1>

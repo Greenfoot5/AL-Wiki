@@ -4,30 +4,37 @@
     let { code } = $props();
 </script>
 
-<code>{code.code}</code>
+<code class="code">{code.code}</code>
+
 {#if code.hasOwnProperty("expire")}
-    - Expired: <code>{code.expire.getUTCDate()}/{code.expire.getUTCMonth() + 1}/{code.expire.getUTCFullYear()}</code>
+    <span class="preset-typo-subtitle">- Expired: <code class="code">{code.expire.getUTCDate()}/{code.expire.getUTCMonth() + 1}/{code.expire.getUTCFullYear()}</code></span>
 {:else if code.hasOwnProperty("available")}
-    - Available From: <code>{code.available.getUTCDate()}/{code.available.getUTCMonth() + 1}/{code.available.getUTCFullYear()}</code>
+    <span class="preset-typo-subtitle">- Available From: <code class="code">{code.available.getUTCDate()}/{code.available.getUTCMonth() + 1}/{code.available.getUTCFullYear()}</code></span>
 {/if}
+
 {#if code.hasOwnProperty("note")}
-    <p class="note">{code.note}</p>
+    <p class="note opacity-60">{code.note}</p>
 {/if}
+
 <div class="code-content">
     {#if code.hasOwnProperty("title")}
         <p>Title: {code.title}</p>
     {/if}
-    <p style="color: var(--nord-yellow)">Gold: {code.gold.toLocaleString()}</p>
-    <p style="color: var(--nord-frost-2)">Diamonds: {code.diamonds.toLocaleString()}</p>
+
+    <p class="text-warning-950-50">Gold: {code.gold.toLocaleString()}</p>
+    <p class="text-primary-700-300">Diamonds: {code.diamonds.toLocaleString()}</p>
+
     {#if code.hasOwnProperty("tokens")}
         <p>Battle Tokens: {code.tokens}</p>
     {/if}
+
     {#if code.hasOwnProperty("synergy_stones")}
-        <p style="color: var(--nord-frost-0)">Synergy Stones: {code.synergy_stones}</p>
+        <p class="text-tertiary-950-50">Synergy Stones: {code.synergy_stones}</p>
     {/if}
+
     {#if code.hasOwnProperty("items")}
-        <h5>Items:</h5>
-        <ul>
+        <h5 class="h5">Items:</h5>
+        <ul class="list-inside list-disc">
             {#each code.items as item}
                 <li>
                     <Rarity rarity={item.rarity} />
@@ -45,15 +52,16 @@
                     {/if}
 
                     {#if item.hasOwnProperty("cosmetic")}
-                        <p class="note">Cosmetic: {item.cosmetic}</p>
+                        <p class="note opacity-60">Cosmetic: {item.cosmetic}</p>
                     {/if}
                 </li>
             {/each}
         </ul>
     {/if}
+
     {#if code.hasOwnProperty("materials")}
-        <h5>Materials:</h5>
-        <ul>
+        <h5 class="h5">Materials:</h5>
+        <ul class="list-inside list-disc">
             {#each code.materials as material}
                 <li>
                     <Rarity rarity={material.rarity} />
@@ -86,7 +94,7 @@
         &::after {
             content: '';
             height: 0.05em;
-            background: var(--nord-frost-0);
+            //background: var(--nord-frost-0);
             width: 8em;
             position: absolute;
             bottom: 0;
@@ -105,7 +113,7 @@
     }
 
     .note {
-        color: var(--nord-muted);
+        //color: var(--nord-muted);
         font-size: 0.9rem;
         margin-top: 0.4em;
         margin-left: 0.5em;

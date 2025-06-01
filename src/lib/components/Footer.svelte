@@ -4,7 +4,7 @@
 
 <div>
     <p>
-        Psst, hey, check out the <a href={github} target="_blank">GitHub</a> or join the <a href={discord} target="_blank">Bacon Army Discord</a>
+<!--        Psst, hey, check out the <a href={github} target="_blank">GitHub</a> or join the <a href={discord} target="_blank">Bacon Army Discord</a>-->
 <!--        or consider donating to help keep this running on <a href={patreon}-->
 <!--                                                             target="_blank">Patreon</a>-->
     </p>
