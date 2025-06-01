@@ -2,6 +2,7 @@
     import BISArmourTable from "$lib/components/BISArmourTable.svelte";
     import BISWeaponTable from "$lib/components/BISWeaponTable.svelte";
     import Callout from "$lib/components/Callout.svelte";
+    import PreviousTiers from "$lib/components/PreviousTiers.svelte";
 
     let { data } = $props();
 </script>
@@ -19,14 +20,16 @@
 <div class="body">
     <div class="title text-center">
         <h1 class="h1">Best in slot</h1>
-        <p class="preset-typo-subtitle">This is a list of the best stat rolls for each T3.5 item drop in the game.
+        <p class="preset-typo-subtitle pb-8">This is a list of the best stat rolls for each T3.5 item drop in the game.
             Unknown stats are replaced with <code>???</code> and stats with <code>?</code> after require confirmation.
             Please let Greenfoot5 know either in-game or via Discord if you've got any missing data, or if you feel some data is wrong1
         </p>
     </div>
     <p>Items can be upgraded up to 10 times. Each stat lists first the value without any upgrades, then the value at max upgrade.</p>
 
-    <Callout variant="warning">This page will no longer actively updated as T4 has been released. Pull requests will still be reviewed.</Callout>
+    <PreviousTiers tier="t3" />
+
+    <Callout variant="warning">This page will no longer be actively updated as T4 has been released. Pull requests will still be reviewed.</Callout>
 
     <details>
         <summary><h2>Head</h2></summary>

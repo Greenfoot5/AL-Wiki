@@ -2,6 +2,7 @@
     import BISArmourTable from "$lib/components/BISArmourTable.svelte";
     import BISWeaponTable from "$lib/components/BISWeaponTable.svelte";
     import Callout from "$lib/components/Callout.svelte";
+    import PreviousTiers from "$lib/components/PreviousTiers.svelte";
 
     let { data } = $props();
 </script>
@@ -26,6 +27,8 @@
         </p>
     </div>
     <p>Items can be upgraded up to 10 times. Each stat lists first the value without any upgrades, then the value at max upgrade.</p>
+
+    <PreviousTiers tier="t4" />
 
     <Callout variant="error">Many values are inaccurate or missing as the season has just released.</Callout>
 
