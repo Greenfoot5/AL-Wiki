@@ -2,7 +2,6 @@
     import {ArrowBigRightDash} from "@lucide/svelte";
 
     let { item } = $props();
-    console.log(item);
 </script>
 
 <td>{@render damage(item.damage)}</td>
