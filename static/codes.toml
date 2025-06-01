@@ -25,7 +25,7 @@ gold = 50_000
 
 [[expired]]
 note = "Granted to internal testers for their hard work"
-code = "[REDACTED]"
+code = "ALTESTER"
 gold = 100_000
 diamonds = 1_000
 tokens = 100
