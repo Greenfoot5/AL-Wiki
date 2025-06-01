@@ -18,7 +18,9 @@
 </svelte:head>
 
 <div class="body">
-    <PageTitle title="FAQs" subtitle="Some questions that get frequently asked or other info that should be shared"/>
+    <PageTitle title="FAQs">
+        Some questions that get frequently asked or other info that should be shared
+    </PageTitle>
 
     <Accordion {value} onValueChange={(e) => (value = e.value)} collapsible>
         <Accordion.Item value="codes">

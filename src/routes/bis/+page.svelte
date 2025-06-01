@@ -6,6 +6,7 @@
     import Callout from "$lib/components/Callout.svelte";
     import PreviousTiers from "$lib/components/PreviousTiers.svelte";
     import { HardHat, Sword, BowArrow, Wand, Shield, Hand, Footprints, Shirt, Swords, Bone, Anvil, Brush } from '@lucide/svelte';
+    import PageTitle from "$lib/components/PageTitle.svelte";
 
     let { data } = $props();
 
@@ -24,14 +25,11 @@
 </svelte:head>
 
 <div class="body">
-    <div class="title text-center">
-        <h1 class="h1">Best In Slot</h1>
-        <p class="preset-typo-subtitle pb-8">
-            This is a list of the best stat rolls for each T4 item drop in the game.
-            Unknown stats are replaced with <span class="text-surface-600-400">???</span> and stats with <span class="text-warning-600-400">?</span> after require confirmation.
-            Please let Greenfoot5 know either in-game or via Discord if you've got any missing data, or if you feel some data is wrong1
-        </p>
-    </div>
+    <PageTitle title="Best In Slot">
+        This is a list of the best stat rolls for each T4 item drop in the game.
+        Unknown stats are replaced with <span class="text-surface-600-400">???</span> and stats with <span class="text-warning-600-400">?</span> after require confirmation.
+        Please let Greenfoot5 know either in-game or via Discord if you've got any missing data, or if you feel some data is wrong1
+    </PageTitle>
     <p>Items can be upgraded up to 10 times. Each stat lists first the value without any upgrades, then the value at max upgrade.</p>
 
     <PreviousTiers tier="t4" />
