@@ -13,21 +13,20 @@
     <meta data-key="description" name="description" content="A list of the best stat rolls for each T3 item drop in the game.">
     <meta property="og:title" content="Aeon's Legends - Best in Slot" />
     <meta property="og:description" content="A list of the best stat rolls for each T3 item drop in the game." />
-    <meta property="og:url" content="https://al.alchemix.dev/bis" />
+    <meta property="og:url" content="https://al.alchemix.dev/bis/t3" />
 </svelte:head>
 
 <div class="body">
     <div class="title text-center">
-        <h1 class="h1">Best In Slot</h1>
-        <p class="preset-typo-subtitle pb-8">
-            This is a list of the best stat rolls for each T4 item drop in the game.
-            Unknown stats are replaced with <code class="code">???</code> and stats with <code class="code">?</code> after require confirmation.
+        <h1 class="h1">Best in slot</h1>
+        <p class="preset-typo-subtitle">This is a list of the best stat rolls for each T3.5 item drop in the game.
+            Unknown stats are replaced with <code>???</code> and stats with <code>?</code> after require confirmation.
             Please let Greenfoot5 know either in-game or via Discord if you've got any missing data, or if you feel some data is wrong1
         </p>
     </div>
     <p>Items can be upgraded up to 10 times. Each stat lists first the value without any upgrades, then the value at max upgrade.</p>
 
-    <Callout variant="error">Many values are inaccurate or missing as the season has just released.</Callout>
+    <Callout variant="warning">This page will no longer actively updated as T4 has been released. Pull requests will still be reviewed.</Callout>
 
     <details>
         <summary><h2>Head</h2></summary>
