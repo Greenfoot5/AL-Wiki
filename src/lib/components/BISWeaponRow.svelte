@@ -2,17 +2,17 @@
     import {ArrowBigRightDash} from "@lucide/svelte";
 
     let { item } = $props();
+    console.log(item);
 </script>
 
 <td>{@render damage(item.damage)}</td>
 <td>{@render row(item.speed)}</td>
-<td>{@render row(item.str)}</td>
-<td>{@render row(item.dex)}</td>
-<td>{@render row(item.int)}</td>
-<td>{@render row(item.vit)}</td>
+<td>{@render row(item.primary)}</td>
+<td>{@render row(item.secondary)}</td>
+<td>{@render row(item.normal)}</td>
 
 {#snippet row(stat)}
-    {#if stat[0] === stat[1]}
+    {#if stat.length === 1 || stat[0] === stat[1]}
         {@render value(stat[0])}
     {:else}
         {@render value(stat[0])} <ArrowBigRightDash class="inline" size={20}/> {@render value(stat[1])}
@@ -30,7 +30,7 @@
 {/snippet}
 
 {#snippet damage(stat)}
-    {#if stat[0][0] === stat[1][0] && stat[0][1] === stat[1][1]}
+    {#if stat.length === 1 || (stat[0][0] === stat[1][0] && stat[0][1] === stat[1][1])}
         {@render pair(stat[0])}
     {:else}
         {@render pair(stat[0])} <ArrowBigRightDash class="inline" size={20}/> {@render pair(stat[1])}

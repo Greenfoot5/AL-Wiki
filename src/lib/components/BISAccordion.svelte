@@ -5,6 +5,7 @@
     import BISWeaponTable from "$lib/components/BISWeaponTable.svelte";
 
     let opened = $state([]);
+    let weapons = $state([]);
     let { data } = $props();
 </script>
 
@@ -103,7 +104,7 @@
         {#snippet control()}<h2 class="h2">Weapons</h2>{/snippet}
         <!-- Panel -->
         {#snippet panel()}
-            <Accordion {opened} onValueChange={(e) => (value = e.value)} multiple>
+            <Accordion {weapons} onValueChange={(e) => (value = e.value)} multiple>
                 <Accordion.Item value="Melee">
                     {#snippet lead()}<Sword class="h4" size={24} strokeWidth={2.5} />{/snippet}
                     {#snippet control()}<h4 class="h4">Melee</h4>{/snippet}
@@ -142,7 +143,7 @@
                     {#snippet control()}<h2 class="h4">Shield</h2>{/snippet}
                     <!-- Panel -->
                     {#snippet panel()}
-                        <BISWeaponTable item={data.shield} caption="Shield (off-hand only)" />
+                        <BISArmourTable item={data.shield} caption="Shield (off-hand only)" />
                     {/snippet}
                 </Accordion.Item>
             </Accordion>

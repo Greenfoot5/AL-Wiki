@@ -13,10 +13,9 @@
         <th scope="col">Rarity</th>
         <th scope="col">Damage</th>
         <th scope="col">Attack Speed</th>
-        <th scope="col">Strength</th>
-        <th scope="col">Dexterity</th>
-        <th scope="col">Intelligence</th>
-        <th scope="col">Vitality</th>
+        <th scope="col">Primary Scaled</th>
+        <th scope="col">Secondary Scaled</th>
+        <th scope="col">Default</th>
     </tr>
     </thead>
     <tbody>
