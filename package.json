@@ -25,6 +25,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@lucide/svelte": "^0.511.0",
 		"@sveltejs/adapter-static": "^3.0.8",
 		"mdsvex": "^0.12.6",
 		"sass": "^1.89.1",
