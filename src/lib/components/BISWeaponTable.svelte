@@ -15,7 +15,7 @@
         <th scope="col">Attack Speed</th>
         <th scope="col">Primary Scaled</th>
         <th scope="col">Secondary Scaled</th>
-        <th scope="col">Default</th>
+        <th scope="col">Unscaled</th>
     </tr>
     </thead>
     <tbody>
