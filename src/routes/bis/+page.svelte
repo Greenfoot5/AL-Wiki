@@ -28,7 +28,7 @@
         <h1 class="h1">Best In Slot</h1>
         <p class="preset-typo-subtitle pb-8">
             This is a list of the best stat rolls for each T4 item drop in the game.
-            Unknown stats are replaced with <code class="code">???</code> and stats with <code class="code">?</code> after require confirmation.
+            Unknown stats are replaced with <span class="text-surface-600-400">???</span> and stats with <span class="text-warning-600-400">?</span> after require confirmation.
             Please let Greenfoot5 know either in-game or via Discord if you've got any missing data, or if you feel some data is wrong1
         </p>
     </div>

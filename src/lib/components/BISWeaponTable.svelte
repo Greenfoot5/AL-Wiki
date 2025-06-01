@@ -6,9 +6,9 @@
 </script>
 <table>
     {#if caption}
-        <caption>{caption}</caption>
+        <caption class="text-tertiary-400-600">{caption}</caption>
     {/if}
-    <thead>
+    <thead class="h6 text-tertiary-700-300">
     <tr>
         <th scope="col">Rarity</th>
         <th scope="col">Damage</th>
@@ -36,10 +36,6 @@
 </table>
 
 <style>
-    thead {
-        color: var(--nord-frost-2)
-    }
-
     th {
         padding: 0 1em;
     }
@@ -50,7 +46,6 @@
     }
 
     caption {
-        color: var(--nord-frost-0);
         font-weight: bold;
     }
 </style>
