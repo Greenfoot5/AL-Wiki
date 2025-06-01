@@ -35,11 +35,13 @@
         {/snippet}
         {#snippet content()}
             <Tabs.Panel value="t4">
-                <Callout variant="info">Many values are inaccurate or missing as the new tier has just released.</Callout>
+                <Callout variant="info">Many values are inaccurate or missing as the new tier has recently released.</Callout>
                 <BISAccordion data={data.t4} />
             </Tabs.Panel>
             <Tabs.Panel value="t3">
-                <Callout variant="error">This page will no longer be actively updated as T4 has been released. Pull requests will still be reviewed.</Callout>
+                <Callout variant="warning">This page will no longer be actively updated as T4 has been released. Pull requests will still be reviewed.</Callout>
+                <Callout variant="error">Due to a change in the way weapons' data is stored, weapons (excluding shield) will not show. Data is still available
+                    <a class="anchor" href="https://github.com/Greenfoot5/AL-Wiki/blob/master/static/bis_t3.toml">on Github</a>.</Callout>
                 <BISAccordion data={data.t3} />
             </Tabs.Panel>
         {/snippet}
