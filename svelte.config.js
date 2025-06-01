@@ -2,6 +2,12 @@ import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from "mdsvex";
 
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	extensions: ['.svelte', '.md'],
@@ -10,7 +16,7 @@ const config = {
 			// The default mdsvex extension is .svx; this overrides that.
 			extensions: ['.md'],
 			layout: {
-				_: 'src/routes/updates/post.svelte',
+				_: join(__dirname, '/src/routes/updates/post.svelte'),
 			},
 			smartypants: {
 				ellipses: false,
