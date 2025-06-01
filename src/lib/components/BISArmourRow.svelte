@@ -12,7 +12,7 @@
 <td>{@render row(item.vit)}</td>
 
 {#snippet row(stat)}
-    {#if stat.size === 0 || stat[0] === stat[1]}
+    {#if stat.size === 1 || stat[0] === stat[1]}
         {@render value(stat[0])}
     {:else}
         {@render value(stat[0])} <ArrowBigRightDash class="inline" size={20}/> {@render value(stat[1])}
