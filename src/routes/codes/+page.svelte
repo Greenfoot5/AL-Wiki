@@ -47,16 +47,7 @@
         padding-bottom: 2em;
     }
 
-    .title {
-        padding-left: 1em;
-        padding-top: 0.5em;
-    }
-
     h2 {
         padding-top: 1em;
-    }
-
-    p {
-        line-height: 0.75em;
     }
 </style>
