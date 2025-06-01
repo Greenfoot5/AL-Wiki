@@ -23,7 +23,7 @@
 <div class="body">
     <PageTitle title="Best In Slot">
         A list of the best stat rolls (drop stats) for each item tier in the game.
-        Unknown stats are replaced with <span class="text-surface-600-400">???</span> and stats with <span class="text-warning-600-400">?</span> after require confirmation.
+        Unknown stats are replaced with <span class="text-surface-600-400">???</span> and stats with <span class="text-warning-600-400">?</span> may not be the highest possible value.
         Please let Greenfoot5 know either in-game or via Discord if you've got any missing data, or if you feel some data is wrong!
     </PageTitle>
     <p>Items can be upgraded up to 10 times. Each stat lists first the value without any upgrades, then the value at max upgrade.</p>
