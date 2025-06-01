@@ -16,8 +16,6 @@
     <meta property="og:url" content="https://al.alchemix.dev/bis" />
 </svelte:head>
 
-<div style="margin: 1em 2em;"><a href="/">Home</a></div>
-
 <div class="body">
     <h1>Best in slot</h1>
     <p>This is a list of the best stat rolls for each T3.5 item drop in the game.
