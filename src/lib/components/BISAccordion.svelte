@@ -50,19 +50,6 @@
         {/snippet}
     </Accordion.Item>
     <hr class="hr" />
-    <Accordion.Item value="legs">
-        {#snippet lead()}<Bone class="h2" size={36} strokeWidth={2.5} />{/snippet}
-        {#snippet control()}<h2 class="h2">Legs</h2>{/snippet}
-        <!-- Panel -->
-        {#snippet panel()}
-            <BISArmourTable item={data.legs.heavy} caption="Heavy" />
-            <hr class="hr short">
-            <BISArmourTable item={data.legs.medium} caption="Medium" />
-            <hr class="hr short">
-            <BISArmourTable item={data.legs.light} caption="Light" />
-        {/snippet}
-    </Accordion.Item>
-    <hr class="hr" />
     <Accordion.Item value="hands">
         {#snippet lead()}<Hand class="h2" size={36} strokeWidth={2.5} />{/snippet}
         {#snippet control()}<h2 class="h2">Hands</h2>{/snippet}
@@ -73,6 +60,19 @@
             <BISArmourTable item={data.gloves.medium} caption="Medium" />
             <hr class="hr short">
             <BISArmourTable item={data.gloves.light} caption="Light" />
+        {/snippet}
+    </Accordion.Item>
+    <hr class="hr" />
+    <Accordion.Item value="legs">
+        {#snippet lead()}<Bone class="h2" size={36} strokeWidth={2.5} />{/snippet}
+        {#snippet control()}<h2 class="h2">Legs</h2>{/snippet}
+        <!-- Panel -->
+        {#snippet panel()}
+            <BISArmourTable item={data.legs.heavy} caption="Heavy" />
+            <hr class="hr short">
+            <BISArmourTable item={data.legs.medium} caption="Medium" />
+            <hr class="hr short">
+            <BISArmourTable item={data.legs.light} caption="Light" />
         {/snippet}
     </Accordion.Item>
     <hr class="hr" />
