@@ -81,11 +81,11 @@
         {#snippet control()}<h2 class="h2">Feet</h2>{/snippet}
         <!-- Panel -->
         {#snippet panel()}
-            <BISArmourTable item={data.feet.heavy} caption="Heavy" />
+            <BISArmourTable item={data.shoes.heavy} caption="Heavy" />
             <hr class="hr short">
-            <BISArmourTable item={data.feet.medium} caption="Medium" />
+            <BISArmourTable item={data.shoes.medium} caption="Medium" />
             <hr class="hr short">
-            <BISArmourTable item={data.feet.light} caption="Light" />
+            <BISArmourTable item={data.shoes.light} caption="Light" />
         {/snippet}
     </Accordion.Item>
 
