@@ -25,11 +25,11 @@
         <BISArmourRow item={item.rare} />
     </tr>
     <tr>
-        <th scope="row"><Rarity rarity="e" /></th>
+        <th scope="row"><Rarity rarity="epic" /></th>
         <BISArmourRow item={item.epic} />
     </tr>
     <tr>
-        <th scope="row"><Rarity rarity="l" /></th>
+        <th scope="row"><Rarity rarity="legendary" /></th>
         <BISArmourRow item={item.legendary} />
     </tr>
     </tbody>
