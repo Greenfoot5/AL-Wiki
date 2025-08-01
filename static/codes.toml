@@ -2,6 +2,19 @@
 note = "Granted with the release of Guild Dominion"
 code = "AL888"
 available = 2025-08-01
+diamonds = 1000
+gold = 70_000
+tokens = 200
+
+[[expired.materials]]
+rarity = "Gold Bar"
+count = 100
+[[expired.materials]]
+rarity = "Iron Bar"
+count = 100
+[[expired.materials]]
+rarity = "Red Bar"
+count = 100
 
 [[expired]]
 note = "Granted for gaining 100 players at 5+ ELO before Christmas"
