@@ -35,7 +35,7 @@
         {/snippet}
         {#snippet content()}
             <Tabs.Panel value="t4">
-                <Callout variant="info">Many values are inaccurate or missing as the new tier has recently released.</Callout>
+                <Callout variant="info">Many values are inaccurate or missing, please help us update them by sharing your stats!</Callout>
                 <BISAccordion data={data.t4} />
             </Tabs.Panel>
             <Tabs.Panel value="t3">
