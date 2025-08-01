@@ -1,7 +1,7 @@
 [[active]]
 note = "Granted with the release of Guild Dominion"
 code = "AL888"
-available = 2025-08-01
+# available = 2025-08-01
 diamonds = 1000
 gold = 70_000
 tokens = 200
