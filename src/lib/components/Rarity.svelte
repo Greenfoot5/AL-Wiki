@@ -8,7 +8,9 @@
     <span class="text-indigo-400">Epic</span>
 {:else if rarity.toLowerCase().startsWith("r")}
     <span class="text-blue-400">Rare</span>
-{:else}
+{:else if rarity.toLowerCase().startsWith("r")}
     <span class="text-base">Common</span>
+{:else}
+    <span class="text-base">{rarity}</span>
 {/if}
 
