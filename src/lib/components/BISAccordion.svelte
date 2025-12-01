@@ -10,7 +10,7 @@
     let { data } = $props();
 </script>
 
-<Accordion {opened} onValueChange={(e) => (value = e.value)} multiple>
+<Accordion {opened} onValueChange={(e) => (opened = e.value)} multiple>
     <Accordion.Item value="head">
         {#snippet lead()}<HardHat class="h2" size={36} strokeWidth={2.5} />{/snippet}
         {#snippet control()}<h2 class="h2">Head</h2>{/snippet}
@@ -109,7 +109,7 @@
                 Weapons (except shield) have a scaling attribute, primary/secondary, modifying str/dex/int/vit of the dropped weapon.
                 The stats below show best possible value for the primary/secondary/default (unscaled) attribute, rather than in str/dex/int/vit.
             </Callout>
-            <Accordion {weapons} onValueChange={(e) => (value = e.value)} multiple>
+            <Accordion {weapons} onValueChange={(e) => (weapons = e.value)} multiple>
                 <Accordion.Item value="Melee">
                     {#snippet lead()}<Sword class="h4" size={24} strokeWidth={2.5} />{/snippet}
                     {#snippet control()}<h4 class="h4">Melee</h4>{/snippet}

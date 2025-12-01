@@ -1,11 +1,10 @@
 <script>
     import Callout from "$lib/components/Callout.svelte";
-    import PreviousTiers from "$lib/components/PreviousTiers.svelte";
     import PageTitle from "$lib/components/PageTitle.svelte";
     import BISAccordion from "$lib/components/BISAccordion.svelte";
     import { Tabs } from '@skeletonlabs/skeleton-svelte';
 
-    let group = $state('t4');
+    let group = $state('t5');
 
     let { data } = $props();
 </script>
@@ -30,12 +29,18 @@
 
     <Tabs value={group} onValueChange={(e) => (group = e.value)} fluid>
         {#snippet list()}
-            <Tabs.Control value="t4"><h4 class="h4"><span class="chip preset-tonal-success mr-4 align-middle">NEW</span>Tier 4</h4></Tabs.Control>
+            <Tabs.Control value="t5"><h4 class="h4"><span class="chip preset-tonal-success mr-4 align-middle">NEW</span>Tier 5</h4></Tabs.Control>
+            <Tabs.Control value="t4"><h4 class="h4">Tier 4</h4></Tabs.Control>
             <Tabs.Control value="t3"><h4 class="h4">Tier 3</h4></Tabs.Control>
         {/snippet}
         {#snippet content()}
             <Tabs.Panel value="t4">
+                <Callout variant="warning">Many values are inaccurate or missing, please help us update them by sharing your stats!</Callout>
                 <Callout variant="info">Many values are inaccurate or missing, please help us update them by sharing your stats!</Callout>
+                <BISAccordion data={data.t5} />
+            </Tabs.Panel>
+            <Tabs.Panel value="t4">
+                <Callout variant="info">This page will no longer be actively updated as T5 has been released. Pull requests will still be reviewed.</Callout>
                 <BISAccordion data={data.t4} />
             </Tabs.Panel>
             <Tabs.Panel value="t3">
