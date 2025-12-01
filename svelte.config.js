@@ -1,6 +1,7 @@
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from "mdsvex";
+import rehypeSkeleton from "rehype-skeletontypography";
 
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
@@ -21,7 +22,8 @@ const config = {
 			smartypants: {
 				ellipses: false,
 				dashes: false,
-			}
+			},
+            rehypePlugins: [rehypeSkeleton]
 		}),
 	],
 	kit: {
