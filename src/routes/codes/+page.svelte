@@ -3,8 +3,11 @@
     import PageTitle from "$lib/components/PageTitle.svelte";
 
     let { data } = $props();
+    // svelte-ignore state_referenced_locally
     let future = data.future;
+    // svelte-ignore state_referenced_locally
     let active = data.active;
+    // svelte-ignore state_referenced_locally
     let expired = data.expired;
 </script>
 

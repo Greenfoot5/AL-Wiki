@@ -1,5 +1,6 @@
 <script>
     const { date } = $props();
+    // svelte-ignore state_referenced_locally
     let countdown = $state("[Countdown]");
 
     function updateCountdown() {

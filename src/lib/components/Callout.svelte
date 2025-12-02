@@ -2,12 +2,16 @@
     let { variant, children }: {variant: string, children: Function} = $props();
 
     let css_class: string = $state("callout");
+    // svelte-ignore state_referenced_locally
     if (variant?.toLowerCase().startsWith("i"))
         css_class += " preset-tonal-tertiary";
+    // svelte-ignore state_referenced_locally
     else if (variant?.toLowerCase().startsWith("w"))
         css_class += " preset-tonal-warning";
+    // svelte-ignore state_referenced_locally
     else if (variant?.toLowerCase().startsWith("e"))
         css_class += " preset-tonal-error";
+    // svelte-ignore state_referenced_locally
     else if (variant?.toLowerCase().startsWith("s"))
         css_class += " preset-tonal-success";
     else
