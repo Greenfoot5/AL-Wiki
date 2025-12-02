@@ -4,8 +4,6 @@
     import BISAccordion from "$lib/components/BISAccordion.svelte";
     import { Tabs } from '@skeletonlabs/skeleton-svelte';
 
-    let group = $state('t5');
-
     let { data } = $props();
 </script>
 
@@ -35,7 +33,7 @@
             <Tabs.Indicator />
         </Tabs.List>
         <Tabs.Content value="t5">
-            <Callout variant="info">Many values are inaccurate or missing, please help us update them by sharing your stats!</Callout>
+            <Callout variant="info">These values have been generated and are marked as unconfirmed until we verify they are all correct. Please share your gear stats!</Callout>
             <BISAccordion data={data.t5} />
         </Tabs.Content>
         <Tabs.Content value="t4">
