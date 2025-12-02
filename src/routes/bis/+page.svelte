@@ -32,6 +32,7 @@
             <Tabs.Trigger value="t5" class="flex-1 h4"><h4><span class="chip preset-tonal-success mr-4 align-middle">NEW</span>Tier 5</h4></Tabs.Trigger>
             <Tabs.Trigger value="t4" class="flex-1"><h4 class="h4">Tier 4</h4></Tabs.Trigger>
             <Tabs.Trigger value="t3" class="flex-1"><h4 class="h4">Tier 3</h4></Tabs.Trigger>
+            <Tabs.Indicator />
         </Tabs.List>
         <Tabs.Content value="t5">
             <Callout variant="info">Many values are inaccurate or missing, please help us update them by sharing your stats!</Callout>
