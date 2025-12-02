@@ -89,88 +89,79 @@ vit = ["11?", "14?"]
 
 # Shoulders
 ## Heavy
-#Shoulders,Heavy,Rare,23;33,20;30,15;20,0;0,0;0,15;20
-#Shoulders,Heavy,Epic,24;34,21;31,16;21,0;0,0;0,16;21
-#Shoulders,Heavy,Legendary,26;36,24;34,18;23,0;0,0;0,17;22
 [shoulders.heavy.rare]
-armour = ["?", "?"]
-magic = ["?", "?"]
-str = ["?", "?"]
+armour = ["23?", "33?"]
+magic = ["20?", "30?"]
+str = ["15?", "20?"]
 dex = [0]
 int = [0]
-vit = ["?", "?"]
+vit = ["15?", "20?"]
 
 [shoulders.heavy.epic]
-armour = ["?", "?"]
-magic = ["?", "?"]
-str = ["?", "?"]
+armour = ["24?", "34?"]
+magic = ["21?", "31?"]
+str = ["16?", "21?"]
 dex = [0]
 int = [0]
-vit = ["?", "?"]
+vit = ["16?", "21?"]
 
 [shoulders.heavy.legendary]
-armour = ["?", "?"]
-magic = ["?", "?"]
-str = ["?", "?"]
+armour = ["26?", "36?"]
+magic = ["24?", "34?"]
+str = ["18?", "23?"]
 dex = [0]
 int = [0]
-vit = ["?", "?"]
+vit = ["17?", "22?"]
 
 ## Medium
-#Shoulders,Medium,Rare,20;30,17;27,0;0,15;20,0;0,13;17
-#Shoulders,Medium,Epic,21;31,18;28,0;0,16;21,0;0,14;18
-#Shoulders,Medium,Legendary,23;33,21;31,0;0,18;23,0;0,15;20
 [shoulders.medium.rare]
-armour = ["?", "?"]
-magic = ["?", "?"]
+armour = ["20?", "30?"]
+magic = ["17?", "27?"]
 str = [0]
-dex = ["?", "?"]
+dex = ["15?", "20?"]
 int = [0]
-vit = ["?", "?"]
+vit = ["13?", "17?"]
 
 [shoulders.medium.epic]
-armour = ["?", "?"]
-magic = ["?", "?"]
+armour = ["21?", "31?"]
+magic = ["18?", "28?"]
 str = [0]
-dex = ["?", "?"]
+dex = ["16?", "21?"]
 int = [0]
-vit = ["?", "?"]
+vit = ["14?", "18?"]
 
 [shoulders.medium.legendary]
-armour = ["?", "?"]
-magic = ["?", "?"]
-str = ["?", "?"]
-dex = ["?", "?"]
-int = ["?", "?"]
-vit = ["?", "?"]
+armour = ["22?", "33?"]
+magic = ["21?", "31?"]
+str = [0]
+dex = ["18?", "23?"]
+int = [0]
+vit = ["15?", "20?"]
 
 ## Light
-#Shoulders,Light,Rare,17;27,15;25,0;0,0;0,15;20,10;13
-#Shoulders,Light,Epic,18;28,16;26,0;0,0;0,16;21,10;13
-#Shoulders,Light,Legendary,20;30,18;28,0;0,0;0,18;23,11;14
 [shoulders.light.rare]
-armour = ["?", "?"]
-magic = ["?", "?"]
+armour = ["17?", "27?"]
+magic = ["15?", "25?"]
 str = [0]
 dex = [0]
-int = ["?", "?"]
-vit = ["?", "?"]
+int = ["15?", "20?"]
+vit = ["10?", "13?"]
 
 [shoulders.light.epic]
-armour = ["?", "?"]
-magic = ["?", "?"]
+armour = ["18?", "28?"]
+magic = ["16?", "26?"]
 str = [0]
 dex = [0]
-int = ["?", "?"]
-vit = ["?", "?"]
+int = ["16?", "21?"]
+vit = ["10?", "13?"]
 
 [shoulders.light.legendary]
-armour = ["?", "?"]
-magic = ["?", "?"]
+armour = ["20?", "30?"]
+magic = ["18?", "28?"]
 str = [0]
 dex = [0]
-int = ["?", "?"]
-vit = ["?", "?"]
+int = ["18?", "23?"]
+vit = ["11?", "14?"]
 
 # Chest
 ## Heavy
