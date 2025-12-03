@@ -16,7 +16,6 @@
         {value: "legs", title: "Legs", icon: Bone},
         {value: "shoes", title: "Feet", icon: Footprints},
     ];
-    console.log(HardHat);
 </script>
 
 <Accordion multiple>
