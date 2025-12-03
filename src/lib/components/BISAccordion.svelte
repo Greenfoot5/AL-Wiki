@@ -12,9 +12,9 @@
         {value: "head", title: "Head", icon: HardHat},
         {value: "shoulders", title: "Shoulders", icon: Anvil},
         {value: "chest", title: "Chest", icon: Shirt},
-        {value: "hands", title: "Hands", icon: Hand},
+        {value: "gloves", title: "Hands", icon: Hand},
         {value: "legs", title: "Legs", icon: Bone},
-        {value: "feet", title: "Feet", icon: Footprints},
+        {value: "shoes", title: "Feet", icon: Footprints},
     ];
     console.log(HardHat);
 </script>
