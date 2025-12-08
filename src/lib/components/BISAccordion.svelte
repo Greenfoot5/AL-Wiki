@@ -4,7 +4,7 @@
     import BISArmourTable from "$lib/components/BISArmourTable.svelte";
     import BISWeaponTable from "$lib/components/BISWeaponTable.svelte";
     import Callout from "$lib/components/Callout.svelte";
-    import { slide } from 'svelte/transition';
+    import ContentSlide from "$lib/components/ContentSlide.svelte";
 
     let { data } = $props();
 
@@ -26,19 +26,13 @@
                 <Icon size={36} strokeWidth={2.5} /> <h2>{item.title}</h2>
             </Accordion.ItemTrigger>
             <!-- Panel -->
-            <Accordion.ItemContent>
-                {#snippet element(attributes)}
-                    {#if !attributes.hidden}
-                        <div transition:slide={{ duration: 250 }}>
-                            <BISArmourTable item={data[item.value].heavy} caption="Heavy" />
-                            <hr class="hr short" />
-                            <BISArmourTable item={data[item.value].medium} caption="Medium" />
-                            <hr class="hr short" />
-                            <BISArmourTable item={data[item.value].light} caption="Light" />
-                        </div>
-                    {/if}
-                {/snippet}
-            </Accordion.ItemContent>
+            <ContentSlide duration={250}>
+                <BISArmourTable item={data[item.value].heavy} caption="Heavy" />
+                <hr class="hr short" />
+                <BISArmourTable item={data[item.value].medium} caption="Medium" />
+                <hr class="hr short" />
+                <BISArmourTable item={data[item.value].light} caption="Light" />
+            </ContentSlide>
         </Accordion.Item>
         <hr class="hr" />
     {/each}
@@ -47,15 +41,9 @@
         <Accordion.ItemTrigger class="h2 flex items-center gap-2">
             <Brush size={36} strokeWidth={2.5} /> <h2>Cloak</h2>
         </Accordion.ItemTrigger>
-        <Accordion.ItemContent>
-            {#snippet element(attributes)}
-                {#if !attributes.hidden}
-                    <div transition:slide={{ duration: 250 }}>
-                        <BISArmourTable item={data.cloak} />
-                    </div>
-                {/if}
-            {/snippet}
-        </Accordion.ItemContent>
+        <ContentSlide duration={250}>
+            <BISArmourTable item={data.cloak} />
+        </ContentSlide>
     </Accordion.Item>
 
     <hr class="hr" />
@@ -63,85 +51,55 @@
         <Accordion.ItemTrigger class="h2 flex items-center gap-2">
             <Swords size={36} strokeWidth={2.5} /> <h2>Weapons</h2>
         </Accordion.ItemTrigger>
-        <Accordion.ItemContent>
-            {#snippet element(attributes)}
-                {#if !attributes.hidden}
-                    <div transition:slide={{ duration: 250 }}>
-                        <Callout variant="info">
-                            Weapons (except shield) have a scaling attribute, primary/secondary, modifying str/dex/int/vit of the dropped weapon.
-                            The stats below show best possible value for the primary/secondary/default (unscaled) attribute, rather than in str/dex/int/vit.
-                        </Callout>
-                        <Accordion multiple>
-                            <Accordion.Item value="Melee">
-                                <Accordion.ItemTrigger class="h4 flex items-center gap-2">
-                                    <Sword size={24} strokeWidth={2.5} /> <h4>Melee</h4>
-                                </Accordion.ItemTrigger>
-                                <Accordion.ItemContent>
-                                    {#snippet element(attributes)}
-                                        {#if !attributes.hidden}
-                                            <div transition:slide={{ duration: 250 }}>
-                                                <BISWeaponTable item={data.melee.sword} caption="Sword (one-handed)" />
-                                                <hr class="hr short">
-                                                <BISWeaponTable item={data.melee.axe} caption="Axe (one-handed)" />
-                                                <hr class="hr short">
-                                                <BISWeaponTable item={data.melee.greatsword} caption="GreatSword (two-handed)" />
-                                                <hr class="hr short">
-                                                <BISWeaponTable item={data.melee.greataxe} caption="GreatAxe (two-handed)" />
-                                            </div>
-                                        {/if}
-                                    {/snippet}
-                                </Accordion.ItemContent>
-                            </Accordion.Item>
-                            <hr class="hr" />
-                            <Accordion.Item value="Bow">
-                                <Accordion.ItemTrigger class="h4 flex items-center gap-2">
-                                    <BowArrow size={24} strokeWidth={2.5} /> <h4>Bow</h4>
-                                </Accordion.ItemTrigger>
-                                <Accordion.ItemContent>
-                                    {#snippet element(attributes)}
-                                        {#if !attributes.hidden}
-                                            <div transition:slide={{ duration: 250 }}>
-                                                <BISWeaponTable item={data.bow.bow} caption="Bow (two-handed)" />
-                                            </div>
-                                        {/if}
-                                    {/snippet}
-                                </Accordion.ItemContent>
-                            </Accordion.Item>
-                            <hr class="hr" />
-                            <Accordion.Item value="Staff">
-                                <Accordion.ItemTrigger class="h4 flex items-center gap-2">
-                                    <Wand size={24} strokeWidth={2.5} /> <h4>Staff</h4>
-                                </Accordion.ItemTrigger>
-                                <Accordion.ItemContent>
-                                    {#snippet element(attributes)}
-                                        {#if !attributes.hidden}
-                                            <div transition:slide={{ duration: 250 }}>
-                                                <BISWeaponTable item={data.staff.staff} caption="Staff (two-handed)" />
-                                            </div>
-                                        {/if}
-                                    {/snippet}
-                                </Accordion.ItemContent>
-                            </Accordion.Item>
-                            <hr class="hr" />
-                            <Accordion.Item value="Shield">
-                                <Accordion.ItemTrigger class="h4 flex items-center gap-2">
-                                    <Shield size={24} strokeWidth={2.5} /> <h4>Shield</h4>
-                                </Accordion.ItemTrigger>
-                                <Accordion.ItemContent>
-                                    {#snippet element(attributes)}
-                                        {#if !attributes.hidden}
-                                            <div transition:slide={{ duration: 250 }}>
-                                                <BISArmourTable item={data.shield} caption="Shield (off-hand only)" />
-                                            </div>
-                                        {/if}
-                                    {/snippet}
-                                </Accordion.ItemContent>
-                            </Accordion.Item>
-                        </Accordion>
-                    </div>
-                {/if}
-            {/snippet}
-        </Accordion.ItemContent>
+        <ContentSlide duration={250}>
+            <Callout variant="info">
+                Weapons (except shield) have a scaling attribute, primary/secondary, modifying str/dex/int/vit of the dropped weapon.
+                The stats below show best possible value for the primary/secondary/default (unscaled) attribute, rather than in str/dex/int/vit.
+            </Callout>
+            <Accordion multiple>
+                <Accordion.Item value="Melee">
+                    <Accordion.ItemTrigger class="h4 flex items-center gap-2">
+                        <Sword size={24} strokeWidth={2.5} /> <h4>Melee</h4>
+                    </Accordion.ItemTrigger>
+                    <ContentSlide duration={250}>
+                        <BISWeaponTable item={data.melee.sword} caption="Sword (one-handed)" />
+                        <hr class="hr short">
+                        <BISWeaponTable item={data.melee.axe} caption="Axe (one-handed)" />
+                        <hr class="hr short">
+                        <BISWeaponTable item={data.melee.greatsword} caption="GreatSword (two-handed)" />
+                        <hr class="hr short">
+                        <BISWeaponTable item={data.melee.greataxe} caption="GreatAxe (two-handed)" />
+                    </ContentSlide>
+                </Accordion.Item>
+                <hr class="hr" />
+                <Accordion.Item value="Bow">
+                    <Accordion.ItemTrigger class="h4 flex items-center gap-2">
+                        <BowArrow size={24} strokeWidth={2.5} /> <h4>Bow</h4>
+                    </Accordion.ItemTrigger>
+                    <ContentSlide duration={250}>
+                        <BISWeaponTable item={data.bow.bow} caption="Bow (two-handed)" />
+                    </ContentSlide>
+                </Accordion.Item>
+                <hr class="hr" />
+                <Accordion.Item value="Staff">
+                    <Accordion.ItemTrigger class="h4 flex items-center gap-2">
+                        <Wand size={24} strokeWidth={2.5} /> <h4>Staff</h4>
+                    </Accordion.ItemTrigger>
+                    <ContentSlide duration={250}>
+                        <BISWeaponTable item={data.staff.staff} caption="Staff (two-handed)" />
+                    </ContentSlide>
+                </Accordion.Item>
+                <hr class="hr" />
+                <Accordion.Item value="Shield">
+                    <Accordion.ItemTrigger class="h4 flex items-center gap-2">
+                        <Shield size={24} strokeWidth={2.5} /> <h4>Shield</h4>
+                    </Accordion.ItemTrigger>
+                    <ContentSlide duration={250}>
+                        <BISArmourTable item={data.shield} caption="Shield (off-hand only)" />
+                    </ContentSlide>
+                </Accordion.Item>
+            </Accordion>
+        </ContentSlide>
     </Accordion.Item>
 </Accordion>
 
