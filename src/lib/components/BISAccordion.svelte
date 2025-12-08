@@ -26,7 +26,7 @@
                 <Icon size={36} strokeWidth={2.5} /> <h2>{item.title}</h2>
             </Accordion.ItemTrigger>
             <!-- Panel -->
-            <ContentSlide duration={250}>
+            <ContentSlide>
                 <BISArmourTable item={data[item.value].heavy} caption="Heavy" />
                 <hr class="hr short" />
                 <BISArmourTable item={data[item.value].medium} caption="Medium" />
@@ -41,7 +41,7 @@
         <Accordion.ItemTrigger class="h2 flex items-center gap-2">
             <Brush size={36} strokeWidth={2.5} /> <h2>Cloak</h2>
         </Accordion.ItemTrigger>
-        <ContentSlide duration={250}>
+        <ContentSlide>
             <BISArmourTable item={data.cloak} />
         </ContentSlide>
     </Accordion.Item>
@@ -51,7 +51,7 @@
         <Accordion.ItemTrigger class="h2 flex items-center gap-2">
             <Swords size={36} strokeWidth={2.5} /> <h2>Weapons</h2>
         </Accordion.ItemTrigger>
-        <ContentSlide duration={250}>
+        <ContentSlide>
             <Callout variant="info">
                 Weapons (except shield) have a scaling attribute, primary/secondary, modifying str/dex/int/vit of the dropped weapon.
                 The stats below show best possible value for the primary/secondary/default (unscaled) attribute, rather than in str/dex/int/vit.
@@ -61,7 +61,7 @@
                     <Accordion.ItemTrigger class="h4 flex items-center gap-2">
                         <Sword size={24} strokeWidth={2.5} /> <h4>Melee</h4>
                     </Accordion.ItemTrigger>
-                    <ContentSlide duration={250}>
+                    <ContentSlide>
                         <BISWeaponTable item={data.melee.sword} caption="Sword (one-handed)" />
                         <hr class="hr short">
                         <BISWeaponTable item={data.melee.axe} caption="Axe (one-handed)" />
@@ -76,7 +76,7 @@
                     <Accordion.ItemTrigger class="h4 flex items-center gap-2">
                         <BowArrow size={24} strokeWidth={2.5} /> <h4>Bow</h4>
                     </Accordion.ItemTrigger>
-                    <ContentSlide duration={250}>
+                    <ContentSlide>
                         <BISWeaponTable item={data.bow.bow} caption="Bow (two-handed)" />
                     </ContentSlide>
                 </Accordion.Item>
@@ -85,7 +85,7 @@
                     <Accordion.ItemTrigger class="h4 flex items-center gap-2">
                         <Wand size={24} strokeWidth={2.5} /> <h4>Staff</h4>
                     </Accordion.ItemTrigger>
-                    <ContentSlide duration={250}>
+                    <ContentSlide>
                         <BISWeaponTable item={data.staff.staff} caption="Staff (two-handed)" />
                     </ContentSlide>
                 </Accordion.Item>
@@ -94,7 +94,7 @@
                     <Accordion.ItemTrigger class="h4 flex items-center gap-2">
                         <Shield size={24} strokeWidth={2.5} /> <h4>Shield</h4>
                     </Accordion.ItemTrigger>
-                    <ContentSlide duration={250}>
+                    <ContentSlide>
                         <BISArmourTable item={data.shield} caption="Shield (off-hand only)" />
                     </ContentSlide>
                 </Accordion.Item>

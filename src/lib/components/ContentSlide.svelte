@@ -13,3 +13,9 @@
         {/if}
     {/snippet}
 </Accordion.ItemContent>
+
+<style>
+    div {
+        margin: var(--margin, inherit);
+    }
+</style>
