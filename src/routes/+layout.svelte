@@ -12,7 +12,10 @@
     <meta property="og:locale" content="en_GB" />
 </svelte:head>
 
+<div class="min-h-screen bg-base-200 text-base-content font-sans selection:bg-primary selection:text-primary-content">
+    <Header />
     {@render children?.()}
+</div>
 
 <style lang="scss">
     div{

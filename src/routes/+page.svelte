@@ -11,9 +11,7 @@
 	import { SiGithub, SiDiscord } from '@icons-pack/svelte-simple-icons';
 
 	import { siteTitle, siteDescription, github, discord } from '$lib/config';
-
-	// State for simple interactions
-	let isMenuOpen = false;
+	import Header from "$lib/components/Header.svelte";
 
 	// Mock data for the "Latest Updates" section
 	const updates = [
@@ -29,189 +27,124 @@
 	<meta property="og:title" content="Greenpedia - Aeon's Legends" />
 	<meta property="og:description" content="Aeon's Legends Wiki Thingy" />
 	<meta property="og:url" content="https://al.alchemix.dev/" />
+	<meta property="theme-color" content="#43C26F" />
 </svelte:head>
 
-<!--
-  DaisyUI Theme Setup:
-  The 'data-theme="dark"' attribute on the body/html is usually handled by your layout.
-  If not, you can add it here: <body data-theme="dark">
--->
-<div class="min-h-screen bg-base-200 text-base-content font-sans selection:bg-primary selection:text-primary-content">
-
-	<!-- Navigation: Using DaisyUI Drawer for Mobile/Desktop handling -->
-	<div class="navbar bg-base-100/90 backdrop-blur-md sticky top-0 z-50 border-b border-base-300">
-
-			<!-- Mobile Menu Button (Drawer Toggle) -->
-			<div class="flex-1 md:hidden">
-				<label for="mobile-drawer" class="btn btn-square btn-ghost">
-					<Menu class="w-6 h-6" />
-				</label>
-			</div>
-
-			<!-- Logo -->
-			<div class="flex-none">
-				<a href="/" class="flex items-center gap-2 group">
-					<div class="p-2 rounded-lg bg-gradient-to-br from-primary to-secondary group-hover:scale-105 transition-transform">
-						<Gamepad2 class="w-6 h-6 text-white" />
-					</div>
-					<span class="text-xl font-bold tracking-tight">{siteTitle}</span>
-				</a>
-			</div>
-
-			<!-- Desktop Menu -->
-			<div class="hidden md:flex flex-1 justify-end items-center gap-6">
-				<a href="#features" class="link link-hover font-medium">Features</a>
-				<a href="#stats" class="link link-hover font-medium">Stats & Drops</a>
-				<a href="#community" class="link link-hover font-medium">Community</a>
-
-				<div class="flex gap-2 ml-4">
-					<a href={github} target="_blank" rel="noopener noreferrer" class="btn btn-circle btn-ghost btn-sm" aria-label="GitHub">
-						<SiGithub class="w-5 h-5" />
-					</a>
-					<a href={discord} target="_blank" rel="noopener noreferrer" class="btn btn-circle btn-ghost btn-sm" aria-label="Discord">
-						<SiDiscord class="w-5 h-5" />
-					</a>
-				</div>
-			</div>
+<!-- Hero Section -->
+<header class="relative overflow-hidden pt-20 pb-32">
+	<!-- Background Decor -->
+	<div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+		<div class="absolute top-0 left-1/4 w-96 h-96 bg-primary rounded-full blur-[128px]"></div>
+		<div class="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary rounded-full blur-[128px]"></div>
 	</div>
 
-	<!-- Mobile Drawer (Off-canvas menu) -->
-	<input id="mobile-drawer" type="checkbox" class="drawer-toggle" />
-	<div class="drawer-side z-50">
-		<label for="mobile-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-		<ul class="menu p-4 w-80 min-h-full bg-base-100 text-base-content border-r border-base-300 gap-2">
-			<li><a href="#features" onclick="{() => document.getElementById('mobile-drawer').checked=false}">Features</a></li>
-			<li><a href="#stats" onclick="{() => document.getElementById('mobile-drawer').checked=false}">Stats & Drops</a></li>
-			<li><a href="#community" onclick="{() => document.getElementById('mobile-drawer').checked=false}">Community</a></li>
-			<div class="divider"></div>
-			<li>
-				<a href={github} target="_blank" class="flex items-center gap-2">
-					<SiGithub class="w-4 h-4" /> GitHub
-				</a>
-			</li>
-			<li>
-				<a href={discord} target="_blank" class="flex items-center gap-2">
-					<SiDiscord class="w-4 h-4" /> Discord
-				</a>
-			</li>
-		</ul>
-	</div>
-
-	<!-- Hero Section -->
-	<header class="relative overflow-hidden pt-20 pb-32">
-		<!-- Background Decor -->
-		<div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
-			<div class="absolute top-0 left-1/4 w-96 h-96 bg-primary rounded-full blur-[128px]"></div>
-			<div class="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary rounded-full blur-[128px]"></div>
+	<div class="container mx-auto px-4 relative z-10 text-center">
+		<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full badge badge-outline badge-lg mb-6 animate-fade-in-up">
+			<Sparkles class="w-4 h-4 text-primary" />
+			<span class="font-semibold uppercase tracking-wider">Wiki v1.0 Live</span>
 		</div>
 
-		<div class="container mx-auto px-4 relative z-10 text-center">
-			<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full badge badge-outline badge-lg mb-6 animate-fade-in-up">
-				<Sparkles class="w-4 h-4 text-primary" />
-				<span class="font-semibold uppercase tracking-wider">Wiki v1.0 Live</span>
-			</div>
+		<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 bg-clip-text">
+			Master Aeon's Legends
+		</h1>
 
-			<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 bg-clip-text bg-gradient-to-r from-base-100-content via-base-200-content to-base-300-content">
-				Master Aeon's Legends
-			</h1>
+		<p class="text-lg md:text-xl text-base-content/70 max-w-2xl mx-auto mb-10 leading-relaxed">
+			The definitive community wiki for <strong>Aeon's Legends</strong>.
+			Track hero stats, verify drop rates, and dominate the Guild Dominion.
+		</p>
 
-			<p class="text-lg md:text-xl text-base-content/70 max-w-2xl mx-auto mb-10 leading-relaxed">
-				The definitive community wiki for <strong>Aeon's Legends</strong>.
-				Track hero stats, verify drop rates, and dominate the Guild Dominion.
-			</p>
-
-			<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-				<a href="#stats" class="btn btn-primary btn-lg shadow-lg shadow-primary/25 hover:-translate-y-0.5">
-					View Stats & Drops
-				</a>
-				<a href={discord} target="_blank" class="btn btn-neutral btn-lg border border-base-300 hover:-translate-y-0.5 flex items-center justify-center gap-2">
-					<SiDiscord class="w-5 h-5" /> Join Community
-				</a>
-			</div>
-		</div>
-	</header>
-
-	<!-- Main Content Grid -->
-	<main class="container mx-auto px-4 pb-24 space-y-24">
-
-		<!-- Features Section -->
-		<section id="features" class="grid md:grid-cols-3 gap-8">
-			{#each [
-				{ icon: Gamepad2, title: "Hero Customization", desc: "Deep dive into respec options, stat scaling, and optimal builds for every class." },
-				{ icon: Users, title: "Guild Dominion", desc: "Strategies for the 4X mass battler events. Learn territory capture and defense tactics." },
-				{ icon: ChartBar, title: "Verified Data", desc: "Stats tracked with screenshot verification to prevent bugs and irregular data points." }
-			] as feature}
-				<div class="card bg-base-100/50 border border-base-300 hover:border-primary/50 transition-colors group">
-					<div class="card-body p-6">
-						<div class="w-12 h-12 rounded-lg bg-base-200 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-							<feature.icon class="w-6 h-6 text-primary" />
-						</div>
-						<h3 class="card-title text-xl">{feature.title}</h3>
-						<p class="text-base-content/70 leading-relaxed">{feature.desc}</p>
-					</div>
-				</div>
-			{/each}
-		</section>
-
-		<!-- Latest Updates / Stats Teaser -->
-		<section id="stats" class="bg-base-100/30 rounded-box p-8 md:p-12 border border-base-300/50">
-			<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
-				<div>
-					<h2 class="text-3xl font-bold mb-2">Latest Updates</h2>
-					<p class="text-base-content/70">Recent changes to the game and wiki data.</p>
-				</div>
-				<a href="#" class="link link-primary font-medium flex items-center gap-1 group">
-					View All Updates <ExternalLink class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
-				</a>
-			</div>
-
-			<div class="grid md:grid-cols-3 gap-6">
-				{#each updates as update}
-					<article class="card bg-base-200 border border-base-300 hover:border-base-content/30 transition-colors">
-						<div class="card-body p-5">
-							<div class="text-xs font-mono text-primary mb-2">{update.date}</div>
-							<h4 class="font-bold text-lg">{update.title}</h4>
-							<p class="text-sm text-base-content/70">{update.desc}</p>
-						</div>
-					</article>
-				{/each}
-			</div>
-		</section>
-
-		<!-- Contribution Callout -->
-		<section class="text-center max-w-3xl mx-auto">
-			<h2 class="text-2xl font-bold mb-4">Help Improve the Wiki</h2>
-			<p class="text-base-content/70 mb-6">
-				We rely on the community for accurate data. Found a bug in the stats?
-				Submit a PR with screenshots to verify drop rates and attribute scaling.
-			</p>
-			<a href={github} class="btn btn-neutral btn-lg">
-				<SiGithub class="w-5 h-5" /> Contribute on GitHub
+		<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+			<a href="#stats" class="btn btn-primary btn-lg shadow-lg shadow-primary/25 hover:-translate-y-0.5">
+				View Stats & Drops
 			</a>
-		</section>
+			<a href={discord} target="_blank" class="btn btn-neutral btn-lg border border-base-300 hover:-translate-y-0.5 flex items-center justify-center gap-2">
+				<SiDiscord class="w-5 h-5" /> Join Community
+			</a>
+		</div>
+	</div>
+</header>
 
-	</main>
+<!-- Main Content Grid -->
+<main class="container mx-auto px-4 pb-24 space-y-24">
 
-	<!-- Footer -->
-	<footer class="footer footer-center p-10 bg-base-100 text-base-content border-t border-base-300">
-		<aside>
-			<div class="font-bold text-lg mb-1">{siteTitle}</div>
-			<p class="text-sm text-base-content/60">
-				Unofficial wiki for Aeon's Legends by Kaos IV.
-			</p>
-		</aside>
-		<nav class="grid-flow-col gap-4">
-			<a href="#" class="link link-hover">Privacy</a>
-			<a href="#" class="link link-hover">Terms</a>
-			<a href={github} class="link link-hover">Source Code</a>
-		</nav>
-		<nav>
-			<div class="text-xs text-base-content/40">
-				&copy; {new Date().getFullYear()} Greenfoot5
+	<!-- Features Section -->
+	<section id="features" class="grid md:grid-cols-3 gap-8">
+		{#each [
+			{ icon: Gamepad2, title: "Hero Customization", desc: "Deep dive into respec options, stat scaling, and optimal builds for every class." },
+			{ icon: Users, title: "Guild Dominion", desc: "Strategies for the 4X mass battler events. Learn territory capture and defense tactics." },
+			{ icon: ChartBar, title: "Verified Data", desc: "Stats tracked with screenshot verification to prevent bugs and irregular data points." }
+		] as feature}
+			<div class="card bg-base-100/50 border border-base-300 hover:border-primary/50 transition-colors group">
+				<div class="card-body p-6">
+					<div class="w-12 h-12 rounded-lg bg-base-200 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+						<feature.icon class="w-6 h-6 text-primary" />
+					</div>
+					<h3 class="card-title text-xl">{feature.title}</h3>
+					<p class="text-base-content/70 leading-relaxed">{feature.desc}</p>
+				</div>
 			</div>
-		</nav>
-	</footer>
-</div>
+		{/each}
+	</section>
+
+	<!-- Latest Updates / Stats Teaser -->
+	<section id="stats" class="bg-base-100/30 rounded-box p-8 md:p-12 border border-base-300/50">
+		<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+			<div>
+				<h2 class="text-3xl font-bold mb-2">Latest Updates</h2>
+				<p class="text-base-content/70">Recent changes to the game and wiki data.</p>
+			</div>
+			<a href="#" class="link link-primary font-medium flex items-center gap-1 group">
+				View All Updates <ExternalLink class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+			</a>
+		</div>
+
+		<div class="grid md:grid-cols-3 gap-6">
+			{#each updates as update}
+				<article class="card bg-base-200 border border-base-300 hover:border-base-content/30 transition-colors">
+					<div class="card-body p-5">
+						<div class="text-xs font-mono text-primary mb-2">{update.date}</div>
+						<h4 class="font-bold text-lg">{update.title}</h4>
+						<p class="text-sm text-base-content/70">{update.desc}</p>
+					</div>
+				</article>
+			{/each}
+		</div>
+	</section>
+
+	<!-- Contribution Callout -->
+	<section class="text-center max-w-3xl mx-auto">
+		<h2 class="text-2xl font-bold mb-4">Help Improve the Wiki</h2>
+		<p class="text-base-content/70 mb-6">
+			We rely on the community for accurate data. Found a bug in the stats?
+			Submit a PR with screenshots to verify drop rates and attribute scaling.
+		</p>
+		<a href={github} class="btn btn-neutral btn-lg">
+			<SiGithub class="w-5 h-5" /> Contribute on GitHub
+		</a>
+	</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer footer-center p-10 bg-base-100 text-base-content border-t border-base-300">
+	<aside>
+		<div class="font-bold text-lg mb-1">{siteTitle}</div>
+		<p class="text-sm text-base-content/60">
+			Unofficial wiki for Aeon's Legends by Kaos IV.
+		</p>
+	</aside>
+	<nav class="grid-flow-col gap-4">
+		<a href="#" class="link link-hover">Privacy</a>
+		<a href="#" class="link link-hover">Terms</a>
+		<a href={github} class="link link-hover">Source Code</a>
+	</nav>
+	<nav>
+		<div class="text-xs text-base-content/40">
+			&copy; {new Date().getFullYear()} Greenfoot5
+		</div>
+	</nav>
+</footer>
+
 
 <style>
 	/* Custom animations if Tailwind config doesn't cover them */
