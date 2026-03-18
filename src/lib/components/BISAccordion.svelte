@@ -1,10 +1,8 @@
 <script lang="ts">
     import { HardHat, Sword, BowArrow, Wand, Shield, Hand, Footprints, Shirt, Swords, Bone, Anvil, Brush } from '@lucide/svelte';
-    import { Accordion } from '@skeletonlabs/skeleton-svelte';
     import BISArmourTable from "$lib/components/BISArmourTable.svelte";
     import BISWeaponTable from "$lib/components/BISWeaponTable.svelte";
     import Callout from "$lib/components/Callout.svelte";
-    import ContentSlide from "$lib/components/ContentSlide.svelte";
 
     let { data } = $props();
 
@@ -18,102 +16,114 @@
     ];
 </script>
 
-<Accordion multiple>
+<!-- Main Accordion Container -->
+<div class="space-y-4">
     {#each armour as item}
         {@const Icon = item.icon}
-        <Accordion.Item value={item.value}>
-            <Accordion.ItemTrigger class="h2 flex items-center gap-2">
-                <Icon size={36} strokeWidth={2.5} /> <h2>{item.title}</h2>
-            </Accordion.ItemTrigger>
-            <!-- Panel -->
-            <ContentSlide>
+
+        <!-- DaisyUI Collapse Item -->
+        <details class="collapse collapse-arrow bg-base-100 border border-base-300 shadow-sm">
+            <summary class="collapse-title text-lg font-bold flex items-center gap-3 cursor-pointer hover:bg-base-200/50 transition-colors">
+                <Icon size={28} class="text-primary" />
+                <span>{item.title}</span>
+            </summary>
+
+            <div class="collapse-content px-4 pt-2 pb-4">
                 <BISArmourTable item={data[item.value].heavy} caption="Heavy" />
-                <hr class="hr short" />
+
+                <div class="divider my-2"></div>
+
                 <BISArmourTable item={data[item.value].medium} caption="Medium" />
-                <hr class="hr short" />
+
+                <div class="divider my-2"></div>
+
                 <BISArmourTable item={data[item.value].light} caption="Light" />
-            </ContentSlide>
-        </Accordion.Item>
-        <hr class="hr" />
+            </div>
+        </details>
     {/each}
 
-    <Accordion.Item value="cloak">
-        <Accordion.ItemTrigger class="h2 flex items-center gap-2">
-            <Brush size={36} strokeWidth={2.5} /> <h2>Cloak</h2>
-        </Accordion.ItemTrigger>
-        <ContentSlide>
+    <!-- Cloak Section -->
+    <details class="collapse collapse-arrow bg-base-100 border border-base-300 shadow-sm">
+        <summary class="collapse-title text-lg font-bold flex items-center gap-3 cursor-pointer hover:bg-base-200/50 transition-colors">
+            <Brush size={28} class="text-primary" />
+            <span>Cloak</span>
+        </summary>
+        <div class="collapse-content px-4 py-2">
             <BISArmourTable item={data.cloak} />
-        </ContentSlide>
-    </Accordion.Item>
+        </div>
+    </details>
 
-    <hr class="hr" />
-    <Accordion.Item value="weapons">
-        <Accordion.ItemTrigger class="h2 flex items-center gap-2">
-            <Swords size={36} strokeWidth={2.5} /> <h2>Weapons</h2>
-        </Accordion.ItemTrigger>
-        <ContentSlide>
-            <Callout variant="info">
+    <!-- Weapons Section (Nested) -->
+    <details class="collapse collapse-arrow bg-base-100 border border-base-300 shadow-sm">
+        <summary class="collapse-title text-lg font-bold flex items-center gap-3 cursor-pointer hover:bg-base-200/50 transition-colors">
+            <Swords size={28} class="text-primary" />
+            <span>Weapons</span>
+        </summary>
+        <div class="collapse-content px-4 py-2">
+            <Callout variant="info" class="mb-4">
                 Weapons (except shield) have a scaling attribute, primary/secondary, modifying str/dex/int/vit of the dropped weapon.
                 The stats below show best possible value for the primary/secondary/default (unscaled) attribute, rather than in str/dex/int/vit.
             </Callout>
-            <Accordion multiple>
-                <Accordion.Item value="Melee">
-                    <Accordion.ItemTrigger class="h4 flex items-center gap-2">
-                        <Sword size={24} strokeWidth={2.5} /> <h4>Melee</h4>
-                    </Accordion.ItemTrigger>
-                    <ContentSlide>
+
+            <!-- Nested Accordion for Weapon Types -->
+            <div class="space-y-3">
+                <!-- Melee -->
+                <details class="collapse bg-base-200 border border-base-300">
+                    <summary class="collapse-title text-base font-semibold flex items-center gap-2 cursor-pointer hover:bg-base-300/50">
+                        <Sword size={20} class="text-secondary" />
+                        <span>Melee</span>
+                    </summary>
+                    <div class="collapse-content px-4 py-2">
                         <BISWeaponTable item={data.melee.sword} caption="Sword (one-handed)" />
-                        <hr class="hr short">
+                        <div class="divider my-2"></div>
                         <BISWeaponTable item={data.melee.axe} caption="Axe (one-handed)" />
-                        <hr class="hr short">
+                        <div class="divider my-2"></div>
                         <BISWeaponTable item={data.melee.greatsword} caption="GreatSword (two-handed)" />
-                        <hr class="hr short">
+                        <div class="divider my-2"></div>
                         <BISWeaponTable item={data.melee.greataxe} caption="GreatAxe (two-handed)" />
-                    </ContentSlide>
-                </Accordion.Item>
-                <hr class="hr" />
-                <Accordion.Item value="Bow">
-                    <Accordion.ItemTrigger class="h4 flex items-center gap-2">
-                        <BowArrow size={24} strokeWidth={2.5} /> <h4>Bow</h4>
-                    </Accordion.ItemTrigger>
-                    <ContentSlide>
+                    </div>
+                </details>
+
+                <!-- Bow -->
+                <details class="collapse bg-base-200 border border-base-300">
+                    <summary class="collapse-title text-base font-semibold flex items-center gap-2 cursor-pointer hover:bg-base-300/50">
+                        <BowArrow size={20} class="text-secondary" />
+                        <span>Bow</span>
+                    </summary>
+                    <div class="collapse-content px-4 py-2">
                         <BISWeaponTable item={data.bow.bow} caption="Bow (two-handed)" />
-                    </ContentSlide>
-                </Accordion.Item>
-                <hr class="hr" />
-                <Accordion.Item value="Staff">
-                    <Accordion.ItemTrigger class="h4 flex items-center gap-2">
-                        <Wand size={24} strokeWidth={2.5} /> <h4>Staff</h4>
-                    </Accordion.ItemTrigger>
-                    <ContentSlide>
+                    </div>
+                </details>
+
+                <!-- Staff -->
+                <details class="collapse bg-base-200 border border-base-300">
+                    <summary class="collapse-title text-base font-semibold flex items-center gap-2 cursor-pointer hover:bg-base-300/50">
+                        <Wand size={20} class="text-secondary" />
+                        <span>Staff</span>
+                    </summary>
+                    <div class="collapse-content px-4 py-2">
                         <BISWeaponTable item={data.staff.staff} caption="Staff (two-handed)" />
-                    </ContentSlide>
-                </Accordion.Item>
-                <hr class="hr" />
-                <Accordion.Item value="Shield">
-                    <Accordion.ItemTrigger class="h4 flex items-center gap-2">
-                        <Shield size={24} strokeWidth={2.5} /> <h4>Shield</h4>
-                    </Accordion.ItemTrigger>
-                    <ContentSlide>
+                    </div>
+                </details>
+
+                <!-- Shield -->
+                <details class="collapse bg-base-200 border border-base-300">
+                    <summary class="collapse-title text-base font-semibold flex items-center gap-2 cursor-pointer hover:bg-base-300/50">
+                        <Shield size={20} class="text-secondary" />
+                        <span>Shield</span>
+                    </summary>
+                    <div class="collapse-content px-4 py-2">
                         <BISArmourTable item={data.shield} caption="Shield (off-hand only)" />
-                    </ContentSlide>
-                </Accordion.Item>
-            </Accordion>
-        </ContentSlide>
-    </Accordion.Item>
-</Accordion>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </details>
+</div>
 
 <style>
-    hr {
-        content: '';
-        height: 0.1em;
-        background: var(--nord-frost-1);
-        justify-content: center;
-        margin: 1em auto;
-        bottom: 0;
-    }
-
-    .short {
-        width: 8em;
+    /* Optional: Customizing the divider color if base-300 isn't enough contrast */
+    .divider {
+        border-top-color: var(--fallback-b3, oklch(var(--b3)/0.5));
     }
 </style>
