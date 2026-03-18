@@ -12,11 +12,7 @@
     <meta property="og:locale" content="en_GB" />
 </svelte:head>
 
-<Header />
-
-<div class="layout">
     {@render children?.()}
-</div>
 
 <style lang="scss">
     div{

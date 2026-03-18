@@ -4,3 +4,8 @@
 @import '@skeletonlabs/skeleton-svelte';
 @import '@skeletonlabs/skeleton/themes/catppuccin';
 @import '@skeletonlabs/skeleton/themes/wintry';
+
+@plugin 'daisyui' {
+    themes: emerald --default, emerald --prefersdark;
+}
+
