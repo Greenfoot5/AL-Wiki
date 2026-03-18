@@ -7,5 +7,6 @@
 
 @plugin 'daisyui' {
     themes: emerald --default, forest --prefersdark;
+    logs: false;
 }
 
