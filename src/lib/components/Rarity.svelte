@@ -9,8 +9,8 @@
 {:else if rarity.toLowerCase().startsWith("rare")}
     <span class="text-blue-400">Rare</span>
 {:else if rarity.toLowerCase().startsWith("common")}
-    <span class="text-base">Common</span>
+    <span>Common</span>
 {:else}
-    <span class="text-base">{rarity}</span>
+    <span>{rarity}</span>
 {/if}
 

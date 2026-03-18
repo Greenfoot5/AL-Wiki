@@ -124,6 +124,41 @@
                 </div>
             </ContentSlide>
         </Accordion.Item>
+
+        <hr class="hr" />
+
+        <Accordion.Item value="drop-rates">
+            <Accordion.ItemTrigger><h3 class="h3">What are the chances for the drops?</h3></Accordion.ItemTrigger>
+            <ContentSlide class="answer">
+                <div class="answer">
+                    <p>
+                        The formula:
+                    <code class="code">
+                        (Base chance + politeness factor) × expedition map progress × difficulty factor
+                    </code>
+                    </p>
+                    <p class="pt-2">
+                        The base chances are as follows:
+                    </p>
+                    <ul>
+                        <li><Rarity rarity="common" />: 80%</li>
+                        <li><Rarity rarity="rare" />: 17%</li>
+                        <li><Rarity rarity="epic" />: 2%</li>
+                        <li><Rarity rarity="legendary" />: 1%</li>
+                    </ul>
+                    <p class="py-1">
+                        For the Epic and Legendary, the chances are shrunk based on the level you are in the expedition.
+                        For instance if you are in the 1/10 level, these chances are the 1/10, = 0.5% and 0.2% and if you are in the last level, the chances are at their base + politeness.
+                    </p>
+                    <p>
+                        Next, these chances are multiplied based on the difficulty by 20% and 50%, bringing them up to<br />
+                        6% and 7.5% for epic and <br />
+                        2.2% and 3% for legendary
+                    </p>
+
+                </div>
+            </ContentSlide>
+        </Accordion.Item>
     </Accordion>
 </div>
 
