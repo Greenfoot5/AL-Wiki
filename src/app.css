@@ -6,6 +6,6 @@
 @import '@skeletonlabs/skeleton/themes/wintry';
 
 @plugin 'daisyui' {
-    themes: emerald --default, emerald --prefersdark;
+    themes: emerald --default, forest --prefersdark;
 }
 
