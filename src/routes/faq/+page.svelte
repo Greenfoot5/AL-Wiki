@@ -106,24 +106,25 @@
             </ContentSlide>
         </Accordion.Item>
 
-        <hr class="hr" />
+<!--        Now uses personal ELO-->
+<!--        <hr class="hr" />-->
 
-        <Accordion.Item value="matchmaking">
-            <Accordion.ItemTrigger><h3 class="h3">I'm facing enemies way above my level in PVP!</h3>A.K.A. How does matchmaking work?</Accordion.ItemTrigger>
-            <ContentSlide class="answer">
-                <div class="answer">
-                    <Callout variant="warning">
-                        Matchmaking is based on your team's ELO, so if you bring teammates with higher ELO, you're going to face opponents who are above your personal ELO.
-                    </Callout>
+<!--        <Accordion.Item value="matchmaking">-->
+<!--            <Accordion.ItemTrigger><h3 class="h3">I'm facing enemies way above my level in PVP!</h3>A.K.A. How does matchmaking work?</Accordion.ItemTrigger>-->
+<!--            <ContentSlide class="answer">-->
+<!--                <div class="answer">-->
+<!--                    <Callout variant="warning">-->
+<!--                        Matchmaking is based on your team's ELO, so if you bring teammates with higher ELO, you're going to face opponents who are above your personal ELO.-->
+<!--                    </Callout>-->
 
-                    <p>
-                        Each account has two different ELO ratings.
-                        They have a personal ELO (the one on the leaderboard) and they also have a team ELO.
-                        The latter is based on your personal ELO, and adjusted based on who's in your team.
-                    </p>
-                </div>
-            </ContentSlide>
-        </Accordion.Item>
+<!--                    <p>-->
+<!--                        Each account has two different ELO ratings.-->
+<!--                        They have a personal ELO (the one on the leaderboard) and they also have a team ELO.-->
+<!--                        The latter is based on your personal ELO, and adjusted based on who's in your team.-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--            </ContentSlide>-->
+<!--        </Accordion.Item>-->
 
         <hr class="hr" />
 
