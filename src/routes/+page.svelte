@@ -5,13 +5,12 @@
 		ChartBar,
 		ExternalLink,
 		Sparkles,
-		Menu
+		CircleAlert
 	} from '@lucide/svelte';
 
 	import { SiGithub, SiDiscord } from '@icons-pack/svelte-simple-icons';
 
 	import { siteTitle, siteDescription, github, discord } from '$lib/config';
-	import Header from "$lib/components/Header.svelte";
 
 	// Mock data for the "Latest Updates" section
 	const updates = [
@@ -40,8 +39,8 @@
 
 	<div class="container mx-auto px-4 relative z-10 text-center">
 		<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full badge badge-outline badge-lg mb-6 animate-fade-in-up">
-			<Sparkles class="w-4 h-4 text-primary" />
-			<span class="font-semibold uppercase tracking-wider">Wiki v1.0 Live</span>
+			<CircleAlert class="w-4 h-4 text-error" />
+			<span class="font-semibold uppercase tracking-wider text-error">Frontpage WIP</span>
 		</div>
 
 		<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 bg-clip-text">
