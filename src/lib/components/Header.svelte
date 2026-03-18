@@ -1,11 +1,8 @@
 <script>
 import { discord, github } from "$lib/config.js";
 import { siteTitle } from "$lib/config.js";
-import { ChartBar, Gamepad2, Sparkles, Users, Menu } from "@lucide/svelte";
+import { Gamepad2, Menu } from "@lucide/svelte";
 import { SiDiscord, SiGithub } from "@icons-pack/svelte-simple-icons";
-
-// State for simple interactions
-let isMenuOpen = false;
 </script>
 
 <!-- Navigation: Using DaisyUI Drawer for Mobile/Desktop handling -->
