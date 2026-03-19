@@ -91,7 +91,7 @@
 				<h2 class="text-3xl font-bold mb-2">Latest Updates</h2>
 				<p class="text-base-content/70">Recent changes to the game and wiki data.</p>
 			</div>
-			<a href="#" class="link link-primary font-medium flex items-center gap-1 group">
+			<a href="updates" class="link link-primary font-medium flex items-center gap-1 group">
 				View All Updates <ExternalLink class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
 			</a>
 		</div>
