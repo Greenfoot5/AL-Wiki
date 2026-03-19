@@ -12,7 +12,7 @@
         return 'primary';
     }
 
-    const calloutClass = getAlertClass(variant);
+    const calloutClass = $derived(getAlertClass(variant));
 </script>
 
 <div role='alert' class="alert {calloutClass} alert-soft my-4">
