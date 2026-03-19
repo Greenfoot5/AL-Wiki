@@ -31,8 +31,6 @@
             </div>
         </details>
 
-        <div class="divider my-2"></div>
-
         <!-- Passive Armour -->
         <details class="collapse collapse-arrow bg-base-100 border border-base-300 shadow-sm">
             <summary class="collapse-title text-lg font-bold cursor-pointer hover:bg-base-200/50 transition-colors">
@@ -47,8 +45,6 @@
             </div>
         </details>
 
-        <div class="divider my-2"></div>
-
         <!-- Politeness -->
         <details class="collapse collapse-arrow bg-base-100 border border-base-300 shadow-sm">
             <summary class="collapse-title text-lg font-bold cursor-pointer hover:bg-base-200/50 transition-colors">
@@ -62,8 +58,6 @@
                 </p>
             </div>
         </details>
-
-        <div class="divider my-2"></div>
 
         <!-- Drop Difficulty -->
         <details class="collapse collapse-arrow bg-base-100 border border-base-300 shadow-sm">
@@ -84,8 +78,6 @@
                 </p>
             </div>
         </details>
-
-        <div class="divider my-2"></div>
 
         <!-- Ranks -->
         <details class="collapse collapse-arrow bg-base-100 border border-base-300 shadow-sm">
