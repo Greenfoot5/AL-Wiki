@@ -4,8 +4,7 @@
 		Users,
 		ChartBar,
 		ExternalLink,
-		Sparkles,
-		CircleAlert
+		Sparkles, Asterisk, MessageCircleQuestionMark
 	} from '@lucide/svelte';
 
 	import { SiGithub, SiDiscord } from '@icons-pack/svelte-simple-icons';
@@ -39,8 +38,8 @@
 
 	<div class="container mx-auto px-4 relative z-10 text-center">
 		<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full badge badge-outline badge-lg mb-6 animate-fade-in-up">
-			<CircleAlert class="w-4 h-4 text-error" />
-			<span class="font-semibold uppercase tracking-wider text-error">Frontpage WIP</span>
+			<Sparkles class="w-4 h-4 text-primary" />
+			<span class="font-semibold uppercase tracking-wider text-primary">Wiki redesign now live!</span>
 		</div>
 
 		<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 bg-clip-text">
@@ -49,14 +48,14 @@
 
 		<p class="text-lg md:text-xl text-base-content/70 max-w-2xl mx-auto mb-10 leading-relaxed">
 			The definitive community wiki for <strong>Aeon's Legends</strong>.
-			Track hero stats, verify drop rates, and dominate the Guild Dominion.
+			Track best drop stats, check out the latest news, and review the season timer.
 		</p>
 
 		<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-			<a href="#stats" class="btn btn-primary btn-lg shadow-lg shadow-primary/25 hover:-translate-y-0.5">
+			<a href="/bis" class="btn btn-primary btn-lg shadow-lg shadow-primary/25 hover:-translate-y-0.5">
 				View Stats & Drops
 			</a>
-			<a href={discord} target="_blank" class="btn btn-neutral btn-lg border border-base-300 hover:-translate-y-0.5 flex items-center justify-center gap-2">
+			<a href={discord} target="_blank" class="btn btn-accent btn-lg border border-base-300 hover:-translate-y-0.5 flex items-center justify-center gap-2">
 				<SiDiscord class="w-5 h-5" /> Join Community
 			</a>
 		</div>
@@ -69,9 +68,9 @@
 	<!-- Features Section -->
 	<section id="features" class="grid md:grid-cols-3 gap-8">
 		{#each [
-			{ icon: Gamepad2, title: "Hero Customization", desc: "Deep dive into respec options, stat scaling, and optimal builds for every class." },
-			{ icon: Users, title: "Guild Dominion", desc: "Strategies for the 4X mass battler events. Learn territory capture and defense tactics." },
-			{ icon: ChartBar, title: "Verified Data", desc: "Stats tracked with screenshot verification to prevent bugs and irregular data points." }
+			{ icon: ChartBar, title: "Best in Slot", desc: "Dive into the best stats each item can drop with, and their best when fully upgraded." },
+			{ icon: Asterisk, title: "Codes", desc: "The latest reward codes listed with their rewards. Also contains the full history of codes." },
+			{ icon: MessageCircleQuestionMark, title: "Your questions, answered", desc: "The frequently asked questions page can answer your... frequently asked questions!" }
 		] as feature}
 			<div class="card bg-base-100/50 border border-base-300 hover:border-primary/50 transition-colors group">
 				<div class="card-body p-6">
