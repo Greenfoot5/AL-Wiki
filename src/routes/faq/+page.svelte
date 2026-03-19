@@ -142,10 +142,3 @@
 
     </div>
 </div>
-
-<style lang="scss">
-    /* Optional: Custom divider color if base-300 isn't enough contrast */
-    .divider {
-        border-top-color: var(--fallback-b3, oklch(var(--b3)/0.5));
-    }
-</style>
