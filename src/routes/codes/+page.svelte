@@ -6,9 +6,9 @@
     let { data } = $props();
 
     // Destructure data safely
-    let future = data.future ?? [];
-    let active = data.active ?? [];
-    let expired = data.expired ?? [];
+    let future = $derived(data.future ?? []);
+    let active = $derived(data.active ?? []);
+    let expired = $derived(data.expired ?? []);
 </script>
 
 <svelte:head>
