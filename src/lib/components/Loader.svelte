@@ -32,8 +32,8 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 
 <style lang="scss">
     .loader {
-        --path: light-dark(var(--color-primary-100), var(--color-primary-900));
-        --dot: light-dark(var(--color-primary-600), var(--color-primary-400));
+        --path: var(--color-neutral);
+        --dot: var(--color-accent);
         --length: var(--duration, 3s);
         width: 44px;
         height: 44px;
