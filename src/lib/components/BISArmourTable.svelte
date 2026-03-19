@@ -4,48 +4,44 @@
 
     let { item, caption } = $props();
 </script>
-<table>
-    {#if caption}
-        <caption class="text-tertiary-400-600">{caption}</caption>
-    {/if}
-    <thead class="h6 text-tertiary-700-300">
-    <tr>
-        <th scope="col">Rarity</th>
-        <th scope="col">Armour</th>
-        <th scope="col">Magic Resistance</th>
-        <th scope="col">Strength</th>
-        <th scope="col">Dexterity</th>
-        <th scope="col">Intelligence</th>
-        <th scope="col">Vitality</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <th scope="row"><Rarity rarity="rare" /></th>
-        <BISArmourRow item={item.rare} />
-    </tr>
-    <tr>
-        <th scope="row"><Rarity rarity="epic" /></th>
-        <BISArmourRow item={item.epic} />
-    </tr>
-    <tr>
-        <th scope="row"><Rarity rarity="legendary" /></th>
-        <BISArmourRow item={item.legendary} />
-    </tr>
-    </tbody>
-</table>
+
+<div class="overflow-x-auto rounded-box border border-base-300 shadow-sm">
+    <table class="table table-zebra w-full">
+        {#if caption}
+            <caption class="py-2 text-base font-bold text-base-content/70">
+                {caption}
+            </caption>
+        {/if}
+        <thead class="bg-base-300 text-base-content">
+        <tr>
+            <th class="whitespace-nowrap">Rarity</th>
+            <th class="text-centre">Armour</th>
+            <th class="text-centre">Magic Resistance</th>
+            <th class="text-centre">Strength</th>
+            <th class="text-centre">Dexterity</th>
+            <th class="text-centre">Intelligence</th>
+            <th class="text-centre">Vitality</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row" class="font-bold"><Rarity rarity="rare" /></th>
+            <BISArmourRow item={item.rare} />
+        </tr>
+        <tr>
+            <th scope="row" class="font-bold"><Rarity rarity="epic" /></th>
+            <BISArmourRow item={item.epic} />
+        </tr>
+        <tr>
+            <th scope="row" class="font-bold"><Rarity rarity="legendary" /></th>
+            <BISArmourRow item={item.legendary} />
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 <style>
-    th {
-        padding: 0 1em;
-    }
-
-    table {
+    .text-centre {
         text-align: center;
-        overflow-x: auto;
-    }
-
-    caption {
-        font-weight: bold;
     }
 </style>

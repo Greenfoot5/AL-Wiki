@@ -1,174 +1,144 @@
 <script>
     import Rarity from "$lib/components/Rarity.svelte";
     import PageTitle from "$lib/components/PageTitle.svelte";
-    import { Accordion } from "@skeletonlabs/skeleton-svelte";
-    import {ArrowBigRightDash} from "@lucide/svelte";
+    import { ArrowBigRightDash } from "@lucide/svelte";
     import Callout from "$lib/components/Callout.svelte";
-    import ContentSlide from "$lib/components/ContentSlide.svelte";
 </script>
 
 <svelte:head>
-    <!-- Be sure to add your image files and un-comment the lines below -->
     <title>FAQs</title>
-    <meta data-key="description" name="description" content="Frequently Asked Questions (and other useful info)">
+    <meta name="description" content="Frequently Asked Questions (and other useful info)" />
     <meta property="og:title" content="Aeon's Legends - FAQs" />
     <meta property="og:description" content="Frequently Asked Questions (and other useful info)" />
     <meta property="og:url" content="https://al.alchemix.dev/faq" />
 </svelte:head>
 
-<div class="body">
+<div class="max-w-4xl mx-auto px-4 py-8">
     <PageTitle title="FAQs">
         Some questions that get frequently asked or other info that should be shared
     </PageTitle>
 
-    <Accordion collapsible>
-        <Accordion.Item value="codes">
-            <!-- Control -->
-            <Accordion.ItemTrigger><h3 class="h3">Any codes?</h3></Accordion.ItemTrigger>
-            <!-- Panel -->
-            <ContentSlide >
-                <a href="/codes" class="anchor answer">Check out the codes page on the site</a>
-            </ContentSlide>
-        </Accordion.Item>
+    <!-- DaisyUI Accordion List -->
+    <div class="space-y-4">
 
-        <hr class="hr" />
+        <!-- Codes -->
+        <details class="collapse collapse-arrow bg-base-100 border border-base-300 shadow-sm">
+            <summary class="collapse-title text-lg font-bold cursor-pointer hover:bg-base-200/50 transition-colors">
+                Any codes?
+            </summary>
+            <div class="collapse-content px-4 py-2">
+                <a href="/codes" class="link link-primary font-medium">Check out the codes page on the site</a>
+            </div>
+        </details>
 
-        <Accordion.Item value="passive-armour">
-            <Accordion.ItemTrigger><h3 class="h3">Passive skill doesn't grant any bonus?</h3></Accordion.ItemTrigger>
-            <ContentSlide>
-                <p class="answer">
+        <!-- Passive Armour -->
+        <details class="collapse collapse-arrow bg-base-100 border border-base-300 shadow-sm">
+            <summary class="collapse-title text-lg font-bold cursor-pointer hover:bg-base-200/50 transition-colors">
+                Passive skill doesn't grant any bonus?
+            </summary>
+            <div class="collapse-content px-4 py-2">
+                <p class="text-base-content/80">
                     Some skills grant bonuses based on what type of armour you use.
                     For example, Heavy Metal grants bonus vitality based on your equipped heavy armour.
                     Double check you've got the right armour equipped if you're not getting any bonus!
                 </p>
-            </ContentSlide>
-        </Accordion.Item>
+            </div>
+        </details>
 
-        <hr class="hr" />
-
-        <Accordion.Item value="politeness">
-            <Accordion.ItemTrigger><h3 class="h3">How does politeness score work?</h3></Accordion.ItemTrigger>
-            <ContentSlide>
-                <p class="answer">
-                    Whenever you send a message, and AI will analyse your message, it's context and previous messages you've sent to work out if it's "polite".
+        <!-- Politeness -->
+        <details class="collapse collapse-arrow bg-base-100 border border-base-300 shadow-sm">
+            <summary class="collapse-title text-lg font-bold cursor-pointer hover:bg-base-200/50 transition-colors">
+                How does politeness score work?
+            </summary>
+            <div class="collapse-content px-4 py-2">
+                <p class="text-base-content/80">
+                    Whenever you send a message, an AI will analyse your message, its context and previous messages you've sent to work out if it's "polite".
                     The exact workings of this haven't been investigated, but chatting and engaging with others in global or guild chat will generally raise the score.
-                    Typically you can easily keep it above rare bonus and mostly above the epic bonus. Legendary however can be a little random currently however.
+                    Typically you can easily keep it above rare bonus and mostly above the epic bonus. Legendary however can be a little random currently.
                 </p>
-            </ContentSlide>
-        </Accordion.Item>
+            </div>
+        </details>
 
-        <hr class="hr" />
-
-        <Accordion.Item value="drop-difficulty">
-            <Accordion.ItemTrigger><h3 class="h3">What affects my drops when challenging harder expeditions?</h3></Accordion.ItemTrigger>
-            <ContentSlide class="answer">
-                <p class="answer">
+        <!-- Drop Difficulty -->
+        <details class="collapse collapse-arrow bg-base-100 border border-base-300 shadow-sm">
+            <summary class="collapse-title text-lg font-bold cursor-pointer hover:bg-base-200/50 transition-colors">
+                What affects my drops when challenging harder expeditions?
+            </summary>
+            <div class="collapse-content px-4 py-2">
+                <p class="text-base-content/80">
                     Each map will drop a different tier of gear (i.e. the 2nd map drops T2 gear). <br />
-                    When increasing the stage number, e.g. 1-3 to 1-4, the xp & gold drops will increase. <br />
+                    When increasing the stage number, e.g. 1-3 to 1-4, the XP & gold drops will increase. <br />
                     When increasing the difficulty,
-                    i.e. from <span class="text-blue-400">normal (blue)</span> <ArrowBigRightDash class="inline" size={20}/>
-                    <span class="text-yellow-500">hard (yellow)</span> <ArrowBigRightDash class="inline" size={20}/>
-                    <span class="text-red-500">torment (red)</span>,
-                    drop rates for <Rarity rarity="rare"/>/<Rarity rarity="epic"/>/<Rarity rarity="legendary"/> gear increases as well as xp & gold rewards.
+                    i.e. from <span class="text-blue-400 font-bold">normal (blue)</span>
+                    <ArrowBigRightDash class="inline mx-1" size={16} />
+                    <span class="text-yellow-500 font-bold">hard (yellow)</span>
+                    <ArrowBigRightDash class="inline mx-1" size={16} />
+                    <span class="text-red-500 font-bold">torment (red)</span>,
+                    drop rates for <Rarity rarity="rare"/>/<Rarity rarity="epic"/>/<Rarity rarity="legendary"/> gear increases as well as XP & gold rewards.
                 </p>
-            </ContentSlide>
-        </Accordion.Item>
+            </div>
+        </details>
 
-        <hr class="hr" />
-
-        <Accordion.Item value="ranks">
-            <Accordion.ItemTrigger><h3 class="h3">What are the different PvP ranks?</h3></Accordion.ItemTrigger>
-            <ContentSlide class="answer">
-                <div class="answer">
-                    Each rank is separated by 250 elo, and upon reaching a new rank (and winning a battle) you gain a title with the same name of your rank.
+        <!-- Ranks -->
+        <details class="collapse collapse-arrow bg-base-100 border border-base-300 shadow-sm">
+            <summary class="collapse-title text-lg font-bold cursor-pointer hover:bg-base-200/50 transition-colors">
+                What are the different PvP ranks?
+            </summary>
+            <div class="collapse-content px-4 py-2">
+                <div class="text-base-content/80">
+                    Each rank is separated by 250 ELO, and upon reaching a new rank (and winning a battle) you gain a title with the same name of your rank.
                     Old titles do not disappear upon gaining new ones.<br />
-                    <img src="divisions.png"
-                         alt="The PVP ranks are split into five divisions with four steps in each.
-                     The five divisions are 'Scout', 'Knight', 'Centurion', 'Iron Guard' and 'Crusader'
-                     Each step is the name of the division and then a suffix.
-                     The first step has no suffix, the latter three have 'Custodian', 'Watcher' and 'Signifier' as the suffix."
-                         style="max-height: 50%">
+                    <div class="mt-4 flex justify-center">
+                        <img src="divisions.png"
+                             alt="The PVP ranks are split into five divisions with four steps in each.
+                             The five divisions are 'Scout', 'Knight', 'Centurion', 'Iron Guard' and 'Crusader'.
+                             Each step is the name of the division and then a suffix.
+                             The first step has no suffix, the latter three have 'Custodian', 'Watcher' and 'Signifier' as the suffix."
+                             class="rounded-box border border-base-300 shadow-sm"
+                        style="max-height: 50%"/>
+                    </div>
                 </div>
-            </ContentSlide>
-        </Accordion.Item>
+            </div>
+        </details>
 
-        <hr class="hr" />
-
-        <Accordion.Item value="synergies">
-            <Accordion.ItemTrigger><h3 class="h3">Synergies</h3></Accordion.ItemTrigger>
-            <ContentSlide class="answer">
-                <div class="answer">
+        <!-- Synergies -->
+        <details class="collapse collapse-arrow bg-base-100 border border-base-300 shadow-sm">
+            <summary class="collapse-title text-lg font-bold cursor-pointer hover:bg-base-200/50 transition-colors">
+                Synergies
+            </summary>
+            <div class="collapse-content px-4 py-2">
+                <div class="text-base-content/80">
                     Synergies work by granting buffs based on who is in your party.
                     For example, gaining the priest synergy at level 1 with a priest in your team grants +2% bonus healing.
-                    <Callout variant="warning">Resetting synergies will NOT grant you your stones back.</Callout>
-                    The maximum amount of stones a FTP (free to play) can earn during a season is enough to max out 2 synergies. Spend your stones wisely!
+                    <Callout variant="warning" class="mt-4">
+                        Resetting synergies will NOT grant you your stones back.
+                    </Callout>
+                    <p class="mt-4">
+                        The maximum amount of stones a FTP (free to play) can earn during a season is enough to max out 2 synergies. Spend your stones wisely!
+                    </p>
                 </div>
-            </ContentSlide>
-        </Accordion.Item>
+            </div>
+        </details>
 
-<!--        Now uses personal ELO-->
-<!--        <hr class="hr" />-->
+        <!-- Matchmaking -->
+        <details class="collapse collapse-arrow bg-base-100 border border-base-300 shadow-sm">
+            <summary class="collapse-title text-lg font-bold cursor-pointer hover:bg-base-200/50 transition-colors">
+                I'm facing enemies way above my level in PVP!
+            </summary>
+            <div class="collapse-content px-4 py-2">
+                <div class="text-base-content/80">
+                    <Callout variant="warning" class="mb-4">
+                        Matchmaking is based on your team's ELO, so if you bring teammates with higher ELO, you're going to face opponents who are above your personal ELO.
+                    </Callout>
 
-<!--        <Accordion.Item value="matchmaking">-->
-<!--            <Accordion.ItemTrigger><h3 class="h3">I'm facing enemies way above my level in PVP!</h3>A.K.A. How does matchmaking work?</Accordion.ItemTrigger>-->
-<!--            <ContentSlide class="answer">-->
-<!--                <div class="answer">-->
-<!--                    <Callout variant="warning">-->
-<!--                        Matchmaking is based on your team's ELO, so if you bring teammates with higher ELO, you're going to face opponents who are above your personal ELO.-->
-<!--                    </Callout>-->
-
-<!--                    <p>-->
-<!--                        Each account has two different ELO ratings.-->
-<!--                        They have a personal ELO (the one on the leaderboard) and they also have a team ELO.-->
-<!--                        The latter is based on your personal ELO, and adjusted based on who's in your team.-->
-<!--                    </p>-->
-<!--                </div>-->
-<!--            </ContentSlide>-->
-<!--        </Accordion.Item>-->
-
-        <hr class="hr" />
-
-        <Accordion.Item value="drop-rates">
-            <Accordion.ItemTrigger><h3 class="h3">What are the chances for the drops?</h3></Accordion.ItemTrigger>
-            <ContentSlide class="answer">
-                <div class="answer">
                     <p>
-                        The formula:
-                    <code class="code">
-                        (Base chance + politeness factor) × expedition map progress × difficulty factor
-                    </code>
+                        Each account has two different ELO ratings.
+                        They have a personal ELO (the one on the leaderboard) and they also have a team ELO.
+                        The latter is based on your personal ELO, and adjusted based on who's in your team.
                     </p>
-                    <p class="pt-2">
-                        The base chances are as follows:
-                    </p>
-                    <ul>
-                        <li><Rarity rarity="common" />: 80%</li>
-                        <li><Rarity rarity="rare" />: 17%</li>
-                        <li><Rarity rarity="epic" />: 2%</li>
-                        <li><Rarity rarity="legendary" />: 1%</li>
-                    </ul>
-                    <p class="py-1">
-                        For the Epic and Legendary, the chances are shrunk based on the level you are in the expedition.
-                        For instance if you are in the 1/10 level, these chances are the 1/10, = 0.5% and 0.2% and if you are in the last level, the chances are at their base + politeness.
-                    </p>
-                    <p>
-                        Next, these chances are multiplied based on the difficulty by 20% and 50%, bringing them up to<br />
-                        6% and 7.5% for epic and <br />
-                        2.2% and 3% for legendary
-                    </p>
-
                 </div>
-            </ContentSlide>
-        </Accordion.Item>
-    </Accordion>
+            </div>
+        </details>
+
+    </div>
 </div>
-
-<style lang="scss">
-    .body {
-        margin: 2em;
-    }
-
-    .answer {
-        margin: calc(var(--spacing) * 4);
-    }
-</style>

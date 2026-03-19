@@ -1,31 +1,78 @@
 <script>
+    import { onMount, onDestroy } from 'svelte';
+
     const { date } = $props();
-    // svelte-ignore state_referenced_locally
-    let countdown = $state("[Countdown]");
+
+    let days = $state(0);
+    let hours = $state(0);
+    let minutes = $state(0);
+    let seconds = $state(0);
+    let expired = $state(false);
+
+    let intervalId;
 
     function updateCountdown() {
-        // Get today's date and time
         const now = new Date().getTime();
-
-        // Find the distance between now and the countdown date
-        const distance = date - now;
-
-        // Time calculations for days, hours, minutes and seconds
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        const targetDate = date instanceof Date ? date.getTime() : new Date(date).getTime();
+        const distance = targetDate - now;
 
         if (distance < 0) {
-            clearInterval(x);
-            countdown = "EXPIRED";
+            clearInterval(intervalId);
+            expired = true;
+            days = hours = minutes = seconds = 0;
+            return;
         }
-        countdown = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+        days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        seconds = Math.floor((distance % (1000 * 60)) / 1000);
     }
 
-    // Update every 1 second
-    const x = setInterval(updateCountdown, 1000);
-    updateCountdown()
+    onMount(() => {
+        updateCountdown();
+        intervalId = setInterval(updateCountdown, 1000);
+    });
+
+    onDestroy(() => {
+        if (intervalId) clearInterval(intervalId);
+    });
 </script>
 
-<h1 class="h1">{countdown}</h1>
+{#if expired}
+    <div class="text-4xl font-bold text-error">Season Started!</div>
+{:else}
+    <div class="grid auto-cols-max grid-flow-col gap-2 text-center">
+        <!-- Days -->
+        <div class="flex flex-col">
+            <span class="countdown font-mono">
+                <span style="--value:{days};" aria-live="polite" aria-label="{days}" class="text-4xl md:text-6xl lg:text-7xl">{days}</span>
+            </span>
+            <span class="text-xs md:text-sm mt-1 text-base-content/60">days</span>
+        </div>
+
+        <!-- Hours -->
+        <div class="flex flex-col">
+            <span class="countdown font-mono">
+                <span style="--value:{hours};" aria-live="polite" aria-label="{hours}" class="text-4xl md:text-6xl lg:text-7xl">{hours}</span>
+            </span>
+            <span class="text-xs md:text-sm mt-1 text-base-content/60">hours</span>
+        </div>
+
+        <!-- Minutes -->
+        <div class="flex flex-col">
+            <span class="countdown font-mono">
+                <span style="--value:{minutes};" aria-live="polite" aria-label="{minutes}" class="text-4xl md:text-6xl lg:text-7xl">{minutes}</span>
+            </span>
+            <span class="text-xs md:text-sm mt-1 text-base-content/60">min</span>
+        </div>
+
+        <!-- Seconds -->
+        <div class="flex flex-col">
+            <span class="countdown font-mono">
+                <span style="--value:{seconds};" aria-live="polite" aria-label="{seconds}" class="text-4xl md:text-6xl lg:text-7xl">{seconds}</span>
+            </span>
+            <span class="text-xs md:text-sm mt-1 text-base-content/60">sec</span>
+        </div>
+    </div>
+{/if}
