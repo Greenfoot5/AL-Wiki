@@ -125,7 +125,7 @@
 </main>
 
 <!-- Footer -->
-<footer class="footer footer-center p-10 bg-base-100 text-base-content border-t border-base-300">
+<footer class="footer footer-center footer-horizontal p-10 bg-base-100 text-base-content border-t border-base-300">
 	<aside>
 		<div class="font-bold text-lg mb-1">{siteTitle}</div>
 		<p class="text-sm text-base-content/60">
@@ -133,9 +133,10 @@
 		</p>
 	</aside>
 	<nav class="grid-flow-col gap-4">
-		<a href="#" class="link link-hover">Privacy</a>
-		<a href="#" class="link link-hover">Terms</a>
-		<a href={github} class="link link-hover">Source Code</a>
+		<a href={github} class="link link-hover hidden md:flex">Source Code</a>
+		<a href={github} class="link link-hover md:hidden flex"><SiGithub size={24}/></a>
+		<a href={discord} class="link link-hover hidden md:flex">Discord</a>
+		<a href={discord} class="link link-hover md:hidden flex"><SiDiscord size={24}/></a>
 	</nav>
 	<nav>
 		<div class="text-xs text-base-content/40">
