@@ -30,7 +30,7 @@
         <!-- Tab 5 -->
         <label class="tab">
             <input type="radio" name="bis" checked="checked" />
-            <span class="badge badge-success badge-outline mr-2">NEW</span>
+<!--            <span class="badge badge-success badge-outline mr-2">NEW</span>-->
             Tier 5
         </label>
         <div id="t5" class="tab-content">
