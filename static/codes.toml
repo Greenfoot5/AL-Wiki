@@ -1,7 +1,14 @@
 [[active]]
+code = "AL777"
+diamonds = 500
+gold = 50_000
+#expire = 2025-01-01
+# activated_again = 2025-01-05
+
+[[active]]
 note = "Granted with the release of Guild Dominion"
 code = "AL888"
-# available = 2025-08-01
+available = 2025-08-01
 diamonds = 1000
 gold = 70_000
 tokens = 200
@@ -33,13 +40,6 @@ count = 20
 [[expired.materials]]
 rarity = "Legendary"
 count = 5
-
-[[active]]
-code = "AL777"
-diamonds = 500
-gold = 50_000
-#expire = 2025-01-01
-# activated_again = 2025-01-05
 
 [[expired]]
 note = "Granted to internal testers for their hard work"
