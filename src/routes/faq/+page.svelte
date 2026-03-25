@@ -121,20 +121,55 @@
         </details>
 
         <!-- Matchmaking -->
+<!--        <details class="collapse collapse-arrow bg-base-100 border border-base-300 shadow-sm">-->
+<!--            <summary class="collapse-title text-lg font-bold cursor-pointer hover:bg-base-200/50 transition-colors">-->
+<!--                I'm facing enemies way above my level in PVP!-->
+<!--            </summary>-->
+<!--            <div class="collapse-content px-4 py-2">-->
+<!--                <div class="text-base-content/80">-->
+<!--                    <Callout variant="warning" class="mb-4">-->
+<!--                        Matchmaking is based on your team's ELO, so if you bring teammates with higher ELO, you're going to face opponents who are above your personal ELO.-->
+<!--                    </Callout>-->
+
+<!--                    <p>-->
+<!--                        Each account has two different ELO ratings.-->
+<!--                        They have a personal ELO (the one on the leaderboard) and they also have a team ELO.-->
+<!--                        The latter is based on your personal ELO, and adjusted based on who's in your team.-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </details>-->
+
+        <!-- Drop Rates -->
         <details class="collapse collapse-arrow bg-base-100 border border-base-300 shadow-sm">
             <summary class="collapse-title text-lg font-bold cursor-pointer hover:bg-base-200/50 transition-colors">
-                I'm facing enemies way above my level in PVP!
+                What are the chances for the drops?
             </summary>
             <div class="collapse-content px-4 py-2">
                 <div class="text-base-content/80">
-                    <Callout variant="warning" class="mb-4">
-                        Matchmaking is based on your team's ELO, so if you bring teammates with higher ELO, you're going to face opponents who are above your personal ELO.
-                    </Callout>
-
                     <p>
-                        Each account has two different ELO ratings.
-                        They have a personal ELO (the one on the leaderboard) and they also have a team ELO.
-                        The latter is based on your personal ELO, and adjusted based on who's in your team.
+                        The formula:
+                        <code>
+                            (Base chance + politeness factor) × expedition map progress × difficulty factor
+                        </code>
+                    </p>
+                    <p class="pt-2">
+                        The base chances are as follows:
+                    </p>
+                    <ul>
+                        <li><Rarity rarity="common" />: 80%</li>
+                        <li><Rarity rarity="rare" />: 17%</li>
+                        <li><Rarity rarity="epic" />: 2%</li>
+                        <li><Rarity rarity="legendary" />: 1%</li>
+                    </ul>
+                    <p class="py-1">
+                        For the <Rarity rarity="epic" /> and <Rarity rarity="legendary" />, the chances are shrunk based on the level you are in the expedition.
+                        For instance if you are in the 1/10 level, these chances are the 1/10, = 0.5% and 0.2% and if you are in the last level, the chances are at their base + politeness.
+                    </p>
+                    <p>
+                        Next, these chances are multiplied based on the difficulty by 20% and 50%, bringing them up to<br />
+                        6% and 7.5% for <Rarity rarity="epic" /> and <br />
+                        2.2% and 3% for <Rarity rarity="legendary" />
                     </p>
                 </div>
             </div>
