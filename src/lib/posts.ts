@@ -19,8 +19,6 @@ export const get_posts = async () => {
         ...post,
     }));
 
-    console.log(sorted_posts);
-
     return {
         posts: sorted_posts,
     };

@@ -1,12 +1,12 @@
 ---
 title: Version 1.3
-released: "2025-01-17"
+date: "2025-01-17"
 ---
 
 <script>
     import Callout from "$lib/components/Callout.svelte";
 </script>
----
+
 ## New
 - Guild chat has limited persistent history. This means it will remain visible even after the server restarts.
 - Added Tier 3.5
@@ -18,7 +18,7 @@ released: "2025-01-17"
 - Guild Events reward BP
 - Better rewards for BD added (2 legendary items on top chest - will be available from the next BD)
 - Improved PC lighting
----
+
 
 ## Balance
 <Callout variant="warning">
@@ -47,7 +47,7 @@ released: "2025-01-17"
 - Sword of Heavens: now provides temporal buff that increases the effectiveness of aura
 - Sword of Heavens: `+0%` / `+10%` / `+20%` / `+30%` / `+40%` damage
 
----
+
 
 ## Fixes
 - Disappearing players in Arena 2 (village)
@@ -65,10 +65,14 @@ released: "2025-01-17"
 - Fixed Ranger's skill "Rapid Shot, Greater", now it will fire the correct amount of rounds, faster
 - Fixed Ranger's skill "Bouncing Shot" that would trigger a SFX bug
 
+---
+
 # 1.3.1
 
 ## Fixes
 - Fixed an issue where the client wouldn't update after some actions, seemingly being disconnected
+
+---
 
 # 1.3.2
 

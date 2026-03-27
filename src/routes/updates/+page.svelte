@@ -1,22 +1,58 @@
 <script lang="ts">
     import TagCloud from '$lib/components/TagCloud.svelte';
     import PostCard from '$lib/components/PostCard.svelte';
+    import {get_posts} from "$lib/posts";
+    import {onMount} from "svelte";
 
-    let { data } = $props();
+    // let { data } = $props();
+    let data = {
+        posts: [],
+        all: [],
+        page: 0,
+        totalPages: 0,
+        total: 0
+    };
+    const posts_per_page = 20;
 
-    function isNew(dateStr: string): boolean {
-        const postDate = new Date(dateStr);
-        const now = new Date();
+    const loadPosts = async () => {
+        let posts: Post[] = (await get_posts()).posts;
+        console.log(posts);
+        // Grab the page number from the query string (defaults to 1)
+        const searchParams = new URLSearchParams(window.location.search);
+        const page = Number(searchParams.get('page') ?? 1);
 
-        // Strip the time portion – we only care about the day
-        const postDay = new Date(postDate.getFullYear(), postDate.getMonth(), postDate.getDate());
-        const today   = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+        // Filter posts
+        const tagFilter = searchParams.get('tag');
+        const filtered = tagFilter
+            ? posts.filter((p: { tags: string[] }) =>
+                p.tags?.includes(tagFilter),
+            )
+            : posts;
 
-        const diffDays = (today.getTime() - postDay.getTime()) / (1000 * 60 * 60 * 24);
+        // Pagination maths
+        const total = filtered.length;
+        const totalPages = Math.ceil(total / posts_per_page);
+        const start = (page - 1) * posts_per_page;
+        const end = start + posts_per_page;
+        const paginated = filtered.slice(start, end);
 
-        // diffDays === 0 → today, === 1 → yesterday
-        return diffDays === 0 || diffDays === 1;
-    }
+        return {
+            posts: paginated,
+            all: filtered,
+            page,
+            totalPages,
+            total,
+        };
+    };
+
+    let promise = new Promise(() => {});
+
+    onMount(() => {
+        promise = (async () => {
+            data = await loadPosts();
+        })();
+    });
+
 </script>
 
 <!-- -------------------------------------------------------------
@@ -100,20 +136,6 @@
 
         <!-- Tag cloud (collect tags from all posts) -->
         <TagCloud posts={data.posts}/>
-
-        <!-- Newsletter signup (optional) -->
-        <!--		<div class="card bg-base-100 shadow mt-6">-->
-        <!--			<div class="card-body">-->
-        <!--				<h3 class="card-title mb-3">Subscribe</h3>-->
-        <!--				<p class="text-sm opacity-80 mb-2">-->
-        <!--					Get the latest updates straight to your inbox.-->
-        <!--				</p>-->
-        <!--				<form class="form-control">-->
-        <!--					<input type="email" placeholder="you@example.com" class="input input-bordered w-full mb-2"/>-->
-        <!--					<button type="submit" class="btn btn-primary w-full">Subscribe</button>-->
-        <!--				</form>-->
-        <!--			</div>-->
-        <!--		</div>-->
     </aside>
 </div>
 

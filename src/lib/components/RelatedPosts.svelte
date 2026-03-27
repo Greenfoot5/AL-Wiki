@@ -1,6 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import {get_posts} from "$lib/posts";
+    import PostCard from "$lib/components/PostCard.svelte";
 
     let posts: Post[] = $state([]);
     const { slug } = $props();
@@ -11,15 +12,12 @@
     onMount(async () => {
         let posts: Post[] = (await get_posts()).posts;
         const current = posts.find(p => p.slug === slug);
-        console.log(current);
         if (!current) return;
 
         related = posts
             .filter(p => p.slug !== slug);
-        console.log(related);
         related = related
             .filter(p => p.tags?.some(t => current.tags?.includes(t)));
-        console.log(related);
         related = related
             .slice(0, 4); // limit to 4 cards
     });

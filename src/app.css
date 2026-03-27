@@ -5,8 +5,13 @@
 @import '@skeletonlabs/skeleton/themes/catppuccin';
 @import '@skeletonlabs/skeleton/themes/wintry';
 
+@plugin "@tailwindcss/typography";
+
 @plugin 'daisyui' {
     themes: emerald --default, forest --prefersdark;
     logs: false;
 }
 
+.all-prose {
+    @apply prose prose-lg lg:prose-xl;
+}

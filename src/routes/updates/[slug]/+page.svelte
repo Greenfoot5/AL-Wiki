@@ -31,7 +31,7 @@
     </section>
 {:else}
     <!-- Simple title strip when no hero image -->
-    <section class="bg-base-200 py-8">
+    <section class="bg-base-300 py-8">
         <div class="container mx-auto text-center">
             <h1 class="text-3xl md:text-4xl font-bold">{data.meta.title}</h1>
         </div>
@@ -41,22 +41,18 @@
 <!-- -------------------------------------------------------------
      MAIN CONTENT AREA
 -------------------------------------------------------------- -->
-<main class="container mx-auto px-4 py-12 flex flex-col lg:flex-row gap-8">
+<main class="container mx-auto px-4 py-12 flex flex-col lg:flex-row gap-8 bg-base-200">
 
     <!-- ==== LEFT SIDE: Article (takes most width) ==== -->
     <article class="lg:flex-1 flex flex-col">
 
         <!-- Meta line (date, author, reading time) -->
-        <div class="flex flex-col sm:flex-row sm:items-center text-sm opacity-70 mb-4">
-            <span>Released: <time datetime={data.meta.released}>{new Date(data.meta.released).toLocaleDateString()}</time></span>
+        <div class="flex flex-col sm:flex-row sm:items-center text-sm opacity-70 mb-4 pl-6">
+            <span>Released: <time datetime={data.meta.date}>{new Date(data.meta.date).toLocaleDateString()}</time></span>
             {#if data.meta.updated && data.meta.updated > data.meta.date}
                 <span class="mx-2 hidden sm:inline">·</span>
                 <span>Updated: <time datetime={data.meta.updated}>{new Date(data.meta.updated).toLocaleDateString()}</time></span>
             {/if}
-            <!--{#if data.meta.author}-->
-            <!--	<span class="mx-2 hidden sm:inline">·</span>-->
-            <!--	<span>{data.meta.author}</span>-->
-            <!--{/if}-->
             {#if data.meta.readingTime}
                 <span class="mx-2 hidden sm:inline">·</span>
                 <span>{data.meta.readingTime.text}</span>
@@ -65,11 +61,11 @@
 
         <!-- Tag list (deterministic colour badges) -->
         {#if data.meta.tags?.length}
-            <div class="mb-6 flex flex-wrap gap-2">
+            <div class="mb-6 flex flex-wrap gap-2 pl-6">
                 {#each data.meta.tags as tag}
-          <span class="badge badge-outline badge-sm {textToBadge(tag)}">
-            {tag}
-          </span>
+                    <span class="badge badge-outline badge-sm {textToBadge(tag)}">
+                        {tag}
+                    </span>
                 {/each}
             </div>
         {/if}
@@ -89,25 +85,9 @@
 <!-- -------------------------------------------------------------
      RELATED POSTS SECTION
 -------------------------------------------------------------- -->
-<section class="bg-base-200 py-12">
+<section class="bg-base-300 py-12">
     <div class="container mx-auto">
         <h2 class="text-2xl font-bold mb-6 text-center">Related Posts</h2>
         <RelatedPosts slug={data.meta.slug} />
     </div>
 </section>
-
-<!-- -------------------------------------------------------------
-     PREVIOUS / NEXT NAVIGATION
--------------------------------------------------------------- -->
-<nav class="container mx-auto px-4 py-8 flex justify-between">
-    {#if data.meta.prev}
-        <a href={`/news/${data.meta.prev.slug}`} class="btn btn-ghost">
-            ← {data.meta.prev.title}
-        </a>
-    {/if}
-    {#if data.meta.next}
-        <a href={`/news/${data.meta.next.slug}`} class="btn btn-ghost ml-auto">
-            {data.meta.next.title} →
-        </a>
-    {/if}
-</nav>

@@ -21,14 +21,14 @@
 <a href={`/updates/${slug}#top`} class="card bg-base-100 shadow-xl hover:shadow-2xl transition hover:bg-neutral border-2
 border-base-200 hover:border-base-300 post-indicator hover:text-neutral-content {thumbnail ? 'row-span-2' : ''}">
     {#if isNew(date)}
-    <span class="indicator-item badge badge-primary badge-sm whitespace-nowrap indicator-start ml-3">
-      New
-    </span>
+        <span class="indicator-item badge badge-primary badge-sm whitespace-nowrap indicator-start ml-3">
+            New
+        </span>
     {/if}
     {#if isNew(updated)}
-    <span class="indicator-item badge badge-secondary badge-sm whitespace-nowrap indicator-start ml-6">
-      Updated
-    </span>
+        <span class="indicator-item badge badge-secondary badge-sm whitespace-nowrap indicator-start ml-6">
+            Updated
+        </span>
     {/if}
     {#if thumbnail}
         <figure class="h-48 overflow-hidden">
