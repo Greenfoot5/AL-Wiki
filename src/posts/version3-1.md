@@ -3,6 +3,7 @@ title: Version 3.1 - Paragons
 date: "2025-12-01"
 tags:
   - update
+  - new tier
 ---
 
 ## New
