@@ -7,17 +7,21 @@
     /** ---------------------------------------------------------
      *  Build a frequency map: { tagName: count }
      * ---------------------------------------------------------- */
-    const tagFreq: Record<string, number> = {};
+    const tagFreq: Record<string, number> = $derived.by(() => {
+        let tagFreq: Record<string, number> = {} as Record<string, number>;
+        for (const p of posts) {
+            if (!p.tags) continue;
 
-    for (const p of posts) {
-        if (!p.tags) continue;
-        for (const t of p.tags) {
-            tagFreq[t] = (tagFreq[t] ?? 0) + 1;
+            for (const t of p.tags) {
+                console.log(t);
+                tagFreq[t] = (tagFreq[t] ?? 0) + 1;
+            }
         }
-    }
+        return tagFreq;
+    });
 
     /** Convert to a sorted array (most used first) */
-    const sortedTags = Object.entries(tagFreq).sort((a, b) => b[1] - a[1]);
+    const sortedTags = $derived(Object.entries(tagFreq).sort((a, b) => b[1] - a[1]));
 </script>
 
 <!-- -----------------------------------------------------------

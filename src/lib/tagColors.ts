@@ -31,7 +31,7 @@ export function textToColor(tag: string): string {
 }
 
 export function textToBadge(tag: string): string {
-    let hash = 1;
+    let hash = 0;
     for (let i = 0; i < tag.length; i++) {
         hash = (hash << 5) - hash + tag.charCodeAt(i);
         hash |= 0;
