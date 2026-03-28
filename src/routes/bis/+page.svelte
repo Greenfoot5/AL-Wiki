@@ -2,6 +2,7 @@
     import Callout from "$lib/components/Callout.svelte";
     import PageTitle from "$lib/components/PageTitle.svelte";
     import BISAccordion from "$lib/components/BISAccordion.svelte";
+    import {siteTitle} from "$lib/config.js";
 
     let { data } = $props();
 </script>

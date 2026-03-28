@@ -1,6 +1,5 @@
 <script lang="ts">
     import { onMount } from 'svelte';
-    // import Head from '$lib/components/head.svelte';
     import RelatedPosts from '$lib/components/RelatedPosts.svelte';
     import TocSidebar from '$lib/components/toc.svelte';
     import { textToBadge } from '$lib/tagColors';
@@ -14,8 +13,13 @@
 <!-- -------------------------------------------------------------
      GLOBAL HEADER
 -------------------------------------------------------------- -->
-<!--<Head title={data.meta.title} description={data.meta.excerpt} />-->
-<div id="top" ></div>
+<svelte:head>
+    <title>{data.meta.title}</title>
+    <meta name="description" content={data.meta.excerpt} />
+    <meta property="og:title" content="Aeon's Legends - {data.meta.title}" />
+    <meta property="og:description" content={data.meta.excerpt} />
+    <meta property="og:url" content="https://al.alchemix.dev/updates/{data.meta.slug}" />
+</svelte:head>
 <!-- -------------------------------------------------------------
      OPTIONAL HERO (full‑width background image)
 -------------------------------------------------------------- -->

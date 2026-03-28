@@ -4,10 +4,9 @@
     import {get_posts} from "$lib/posts";
     import {onMount} from "svelte";
 
-    // let { data } = $props();
     let data = {
-        posts: [],
-        all: [],
+        posts: new Array<Post>(),
+        all: new Array<Post>(),
         page: 0,
         totalPages: 0,
         total: 0
@@ -54,6 +53,14 @@
     });
 
 </script>
+
+<svelte:head>
+    <title>Updates</title>
+    <meta name="description" content="View the latest updates for Aeon's Legends" />
+    <meta property="og:title" content="Aeon's Legends - Updates" />
+    <meta property="og:description" content="View the latest updates for Aeon's Legends" />
+    <meta property="og:url" content="https://al.alchemix.dev/updates" />
+</svelte:head>
 
 <!-- -------------------------------------------------------------
      HERO / INTRO SECTION (optional – you can delete if you want)

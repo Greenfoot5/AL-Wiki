@@ -25,7 +25,6 @@
 	<meta property="og:title" content="Greenpedia - Aeon's Legends" />
 	<meta property="og:description" content="Aeon's Legends Wiki Thingy" />
 	<meta property="og:url" content="https://al.alchemix.dev/" />
-	<meta property="theme-color" content="#43C26F" />
 </svelte:head>
 
 <!-- Hero Section -->
