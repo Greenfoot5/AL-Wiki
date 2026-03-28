@@ -16,7 +16,7 @@ const config = {
 			// The default mdsvex extension is .svx; this overrides that.
 			extensions: ['.md'],
 			layout: {
-				_: join(__dirname, '/src/routes/updates/post.svelte'),
+				_: join(__dirname, '/src/routes/news/post.svelte'),
 			},
 			smartypants: {
 				ellipses: false,

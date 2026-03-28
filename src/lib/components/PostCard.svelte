@@ -18,7 +18,7 @@
     }
 </script>
 
-<a href={`/updates/${slug}#top`} class="card bg-base-100 shadow-xl hover:shadow-2xl transition hover:bg-neutral border-2
+<a href={`/news/${slug}#top`} class="card bg-base-100 shadow-xl hover:shadow-2xl transition hover:bg-neutral border-2
 border-base-200 hover:border-base-300 post-indicator hover:text-neutral-content {thumbnail ? 'row-span-2' : ''}">
     {#if isNew(date)}
         <span class="indicator-item badge badge-primary badge-sm whitespace-nowrap indicator-start ml-3">

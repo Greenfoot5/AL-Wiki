@@ -18,7 +18,7 @@
     <meta name="description" content={data.meta.excerpt} />
     <meta property="og:title" content="Aeon's Legends - {data.meta.title}" />
     <meta property="og:description" content={data.meta.excerpt} />
-    <meta property="og:url" content="https://al.alchemix.dev/updates/{data.meta.slug}" />
+    <meta property="og:url" content="https://al.alchemix.dev/news/{data.meta.slug}" />
 </svelte:head>
 <!-- -------------------------------------------------------------
      OPTIONAL HERO (full‑width background image)

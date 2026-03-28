@@ -55,11 +55,11 @@
 </script>
 
 <svelte:head>
-    <title>Updates</title>
-    <meta name="description" content="View the latest updates for Aeon's Legends" />
-    <meta property="og:title" content="Aeon's Legends - Updates" />
-    <meta property="og:description" content="View the latest updates for Aeon's Legends" />
-    <meta property="og:url" content="https://al.alchemix.dev/updates" />
+    <title>News</title>
+    <meta name="description" content="View the latest news for Aeon's Legends" />
+    <meta property="og:title" content="Aeon's Legends - News" />
+    <meta property="og:description" content="View the latest news for Aeon's Legends" />
+    <meta property="og:url" content="https://al.alchemix.dev/news" />
 </svelte:head>
 
 <!-- -------------------------------------------------------------

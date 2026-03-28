@@ -31,7 +31,7 @@ import { SiDiscord, SiGithub } from "@icons-pack/svelte-simple-icons";
         <a href="/codes" class="link link-hover font-medium">Codes</a>
         <a href="/faq" class="link link-hover font-medium">FAQ</a>
         <a href="/season-timer" class="link link-hover font-medium">Season Timer</a>
-        <a href="/updates" class="link link-hover font-medium">News</a>
+        <a href="/news" class="link link-hover font-medium">News</a>
 
         <div class="flex gap-2">
             <a href={github} target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm" aria-label="GitHub">
@@ -53,7 +53,7 @@ import { SiDiscord, SiGithub } from "@icons-pack/svelte-simple-icons";
         <li><a href="/codes" onclick="{() => document.getElementById('mobile-drawer').checked=false}">Codes</a></li>
         <li><a href="/faq" onclick="{() => document.getElementById('mobile-drawer').checked=false}">FAQ</a></li>
         <li><a href="/season-timer" onclick="{() => document.getElementById('mobile-drawer').checked=false}">Season Timer</a></li>
-        <li><a href="/updates" onclick="{() => document.getElementById('mobile-drawer').checked=false}">News</a></li>
+        <li><a href="/news" onclick="{() => document.getElementById('mobile-drawer').checked=false}">News</a></li>
         <li></li>
         <li>
             <a href={github} target="_blank" class="flex items-center gap-2">

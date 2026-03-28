@@ -10,11 +10,11 @@
     });
 </script>
 
-<h2 class="text-3xl font-bold text-center mb-8">Latest Updates</h2>
+<h2 class="text-3xl font-bold text-center mb-8">Latest News</h2>
 
 <div class="container mx-auto grid md:grid-cols-3 gap-6 px-4">
     {#each latest as { title, date, slug, description }}
-        <a href={`/updates/${slug}`} class="card bg-base-100 shadow-md hover:shadow-xl transition">
+        <a href={`/news/${slug}`} class="card bg-base-100 shadow-md hover:shadow-xl transition">
             <div class="card-body">
                 <h3 class="card-title">{title}</h3>
                 <p class="text-sm opacity-70">{new Date(date).toLocaleDateString()}</p>

@@ -11,8 +11,8 @@
 
 	import { siteTitle, siteDescription, github, discord } from '$lib/config';
 
-	// Mock data for the "Latest Updates" section
-	const updates = [
+	// Mock data for the "Latest News" section
+	const posts = [
 		{ title: "Guild Dominion Update", date: "Mar 15, 2026", desc: "New 4X map mechanics and territory defense strategies added." },
 		{ title: "Hero Balance Patch", date: "Mar 10, 2026", desc: "Adjustments to secondary scaled attributes to fix scaling bugs." },
 		{ title: "Community Spreadsheet v2.0", date: "Mar 05, 2026", desc: "Matthias updated the beginner's guide with verified drop rates." }
@@ -83,25 +83,25 @@
 		{/each}
 	</section>
 
-	<!-- Latest Updates / Stats Teaser -->
+	<!-- Latest News / Stats Teaser -->
 	<section id="stats" class="bg-base-100/30 rounded-box p-8 md:p-12 border border-base-300/50">
 		<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
 			<div>
-				<h2 class="text-3xl font-bold mb-2">Latest Updates</h2>
+				<h2 class="text-3xl font-bold mb-2">Latest News</h2>
 				<p class="text-base-content/70">Recent changes to the game and wiki data.</p>
 			</div>
-			<a href="updates" class="link link-primary font-medium flex items-center gap-1 group">
-				View All Updates <ExternalLink class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+			<a href="news" class="link link-primary font-medium flex items-center gap-1 group">
+				View All News <ExternalLink class="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
 			</a>
 		</div>
 
 		<div class="grid md:grid-cols-3 gap-6">
-			{#each updates as update}
+			{#each posts as post}
 				<article class="card bg-base-200 border border-base-300 hover:border-base-content/30 transition-colors">
 					<div class="card-body p-5">
-						<div class="text-xs font-mono text-primary mb-2">{update.date}</div>
-						<h4 class="font-bold text-lg">{update.title}</h4>
-						<p class="text-sm text-base-content/70">{update.desc}</p>
+						<div class="text-xs font-mono text-primary mb-2">{post.date}</div>
+						<h4 class="font-bold text-lg">{post.title}</h4>
+						<p class="text-sm text-base-content/70">{post.desc}</p>
 					</div>
 				</article>
 			{/each}
