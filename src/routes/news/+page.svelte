@@ -15,7 +15,6 @@
 
     const loadPosts = async () => {
         let posts: Post[] = (await get_posts()).posts;
-        console.log(posts);
         // Grab the page number from the query string (defaults to 1)
         const searchParams = new URLSearchParams(window.location.search);
         const page = Number(searchParams.get('page') ?? 1);

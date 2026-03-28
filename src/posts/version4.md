@@ -3,7 +3,6 @@ title: Version 4.0
 date: 2026-03-13
 tags:
   - update
-  - major
 ---
 
 As have been noted in #💾┊dev-updates, this update has major change to the rendering engine of the game.
