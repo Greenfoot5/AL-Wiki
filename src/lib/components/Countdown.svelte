@@ -42,37 +42,37 @@
 {#if expired}
     <div class="text-4xl font-bold text-error">Season Started!</div>
 {:else}
-    <div class="grid auto-cols-max grid-flow-col gap-2 text-center">
+    <div class="flex gap-2">
         <!-- Days -->
-        <div class="flex flex-col">
+        <div>
             <span class="countdown font-mono">
                 <span style="--value:{days};" aria-live="polite" aria-label="{days}" class="text-4xl md:text-6xl lg:text-7xl">{days}</span>
             </span>
-            <span class="text-xs md:text-sm mt-1 text-base-content/60">days</span>
+            <span class="text-xs md:text-lg mt-1 text-base-content/80">days</span>
         </div>
 
         <!-- Hours -->
-        <div class="flex flex-col">
+        <div>
             <span class="countdown font-mono">
                 <span style="--value:{hours};" aria-live="polite" aria-label="{hours}" class="text-4xl md:text-6xl lg:text-7xl">{hours}</span>
             </span>
-            <span class="text-xs md:text-sm mt-1 text-base-content/60">hours</span>
+            <span class="text-xs md:text-lg mt-1 text-base-content/80">hours</span>
         </div>
 
         <!-- Minutes -->
-        <div class="flex flex-col">
+        <div>
             <span class="countdown font-mono">
                 <span style="--value:{minutes};" aria-live="polite" aria-label="{minutes}" class="text-4xl md:text-6xl lg:text-7xl">{minutes}</span>
             </span>
-            <span class="text-xs md:text-sm mt-1 text-base-content/60">min</span>
+            <span class="text-xs md:text-lg mt-1 text-base-content/80">min</span>
         </div>
 
         <!-- Seconds -->
-        <div class="flex flex-col">
+        <div>
             <span class="countdown font-mono">
                 <span style="--value:{seconds};" aria-live="polite" aria-label="{seconds}" class="text-4xl md:text-6xl lg:text-7xl">{seconds}</span>
             </span>
-            <span class="text-xs md:text-sm mt-1 text-base-content/60">sec</span>
+            <span class="text-xs md:text-lg mt-1 text-base-content/80">sec</span>
         </div>
     </div>
 {/if}
