@@ -10,7 +10,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
     let { selected } = $props();
 </script>
 
-<div class="md:mt-2">
+<div class="md:mt-3">
     {#if selected === "circle"}
         <div class="loader">
             <svg viewBox="0 0 80 80">
