@@ -175,5 +175,18 @@
             </div>
         </details>
 
+        <!-- Wings -->
+        <details class="collapse collapse-arrow bg-base-100 border border-base-300 shadow-sm">
+            <summary class="collapse-title text-lg font-bold cursor-pointer hover:bg-base-200/50 transition-colors">
+                How can I get Wings?
+            </summary>
+            <div class="collapse-content px-4 py-2">
+                <div class="text-base-content/80">
+                    The main method is paying for the season pass. At the end of the season (month) you will get all the premium rewards, if you completed it or not.
+                    Other than this, Wings have only been given to beta testers & on a 7-day login event over Christmas.
+                </div>
+            </div>
+        </details>
+
     </div>
 </div>
