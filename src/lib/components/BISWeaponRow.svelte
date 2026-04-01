@@ -22,7 +22,7 @@
     {#if data === "???"}
         <span class="text-base-content/40 font-mono">???</span>
     {:else if data.toString().includes("?")}
-        <span class="text-warning">{data}</span>
+        <span class="text-secondary font-mono">{data}</span>
     {:else}
         <span class="font-mono">{data}</span>
     {/if}
