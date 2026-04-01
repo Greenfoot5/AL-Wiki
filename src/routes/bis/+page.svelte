@@ -18,7 +18,7 @@
 <div class="max-w-4xl mx-auto px-4 py-8">
     <PageTitle title="Best In Slot">
         A list of the best stat rolls (drop stats) for each item tier in the game.
-        Unknown stats are replaced with <span class="text-base-content/50">???</span> and stats with <span class="text-warning">?</span> may not be the highest possible value.
+        Unknown stats are replaced with <span class="text-base-content/50">???</span> and stats with <span class="text-secondary">?</span> may not be the highest possible value.
         Please let Greenfoot5 know either in-game or via Discord if you've got any missing data, or if you feel some data is wrong!
     </PageTitle>
 
