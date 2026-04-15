@@ -7,7 +7,7 @@ tags:
   - achievements
 ---
 
-## Features and QoL:
+## New
 ### Achievements
 There are now google play games achievements (that can be browsed from the "Season & Quests" window)
 ![Screenshot showing google play games services achievements](/news/gpgsAchievements.png)
@@ -33,4 +33,4 @@ Guild Commanders will be replaced if they are inactive for more than 30 days.
 
 
 ## Fixes:
-(Possible) Fix for some devices that weren't awarded after whatching an ad
+- (Possible) Fix for some devices that weren't awarded after watching an ad
