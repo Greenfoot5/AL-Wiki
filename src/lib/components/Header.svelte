@@ -27,11 +27,11 @@ import { SiDiscord, SiGithub } from "@icons-pack/svelte-simple-icons";
 
     <!-- Desktop Menu -->
     <div class="hidden md:flex flex-1 justify-end items-center gap-6">
+        <a href="/news" class="link link-hover font-medium">News</a>
         <a href="/bis" class="link link-hover font-medium">Stats</a>
         <a href="/codes" class="link link-hover font-medium">Codes</a>
         <a href="/faq" class="link link-hover font-medium">FAQ</a>
         <a href="/season-timer" class="link link-hover font-medium">Season Timer</a>
-        <a href="/news" class="link link-hover font-medium">News</a>
 
         <div class="flex gap-2">
             <a href={github} target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm" aria-label="GitHub">
@@ -49,11 +49,11 @@ import { SiDiscord, SiGithub } from "@icons-pack/svelte-simple-icons";
 <div class="drawer-side z-50">
     <label for="mobile-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
     <ul class="menu p-4 w-80 min-h-full bg-base-100 text-base-content border-r border-base-300 gap-2">
+        <li><a href="/news" onclick="{() => document.getElementById('mobile-drawer').checked=false}">News</a></li>
         <li><a href="/bis" onclick="{() => document.getElementById('mobile-drawer').checked=false}">Best in Slot</a></li>
         <li><a href="/codes" onclick="{() => document.getElementById('mobile-drawer').checked=false}">Codes</a></li>
         <li><a href="/faq" onclick="{() => document.getElementById('mobile-drawer').checked=false}">FAQ</a></li>
         <li><a href="/season-timer" onclick="{() => document.getElementById('mobile-drawer').checked=false}">Season Timer</a></li>
-        <li><a href="/news" onclick="{() => document.getElementById('mobile-drawer').checked=false}">News</a></li>
         <li></li>
         <li>
             <a href={github} target="_blank" class="flex items-center gap-2">
