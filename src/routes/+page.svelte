@@ -1,10 +1,8 @@
 <script>
 	import {
-		Gamepad2,
-		Users,
 		ChartBar,
 		ExternalLink,
-		Sparkles, Asterisk, MessageCircleQuestionMark
+		Sword, Asterisk, MessageCircleQuestionMark
 	} from '@lucide/svelte';
 
 	import { SiGithub, SiDiscord } from '@icons-pack/svelte-simple-icons';
@@ -37,8 +35,8 @@
 
 	<div class="container mx-auto px-4 relative z-10 text-center">
 		<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full badge badge-outline badge-lg mb-6 animate-fade-in-up">
-			<Sparkles class="w-4 h-4 text-primary" />
-			<span class="font-semibold uppercase tracking-wider text-primary">Wiki redesign now live!</span>
+			<Sword class="w-4 h-4 text-primary" />
+			<span class="font-semibold uppercase tracking-wider text-primary">T6 has been released!</span>
 		</div>
 
 		<h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 bg-clip-text">

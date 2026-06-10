@@ -28,10 +28,24 @@
 
     <!-- DaisyUI Tabs -->
     <div class="tabs tabs-border tabs-lg mb-8">
-        <!-- Tab 5 -->
+        <!-- Tab 6 -->
         <label class="tab">
             <input type="radio" name="bis" checked="checked" />
-<!--            <span class="badge badge-success badge-outline mr-2">NEW</span>-->
+            <span class="badge badge-success badge-outline mr-2">NEW</span>
+            Tier 6
+        </label>
+        <div id="t6" class="tab-content">
+<!--            <Callout variant="info">-->
+<!--                These values have been generated and are marked as unconfirmed until we verify they are all correct. Please share your gear stats!-->
+<!--            </Callout>-->
+            <div class="mt-4">
+                <BISAccordion data={data.t6} />
+            </div>
+        </div>
+
+        <!-- Tab 5 -->
+        <label class="tab">
+            <input type="radio" name="bis" />
             Tier 5
         </label>
         <div id="t5" class="tab-content">
