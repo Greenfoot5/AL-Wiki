@@ -49,8 +49,8 @@
             Tier 5
         </label>
         <div id="t5" class="tab-content">
-            <Callout variant="info">
-                These values have been generated and are marked as unconfirmed until we verify they are all correct. Please share your gear stats!
+            <Callout variant="warning">
+                This page will no longer be actively updated as T6 has been released. Pull requests will still be reviewed.
             </Callout>
             <div class="mt-4">
                 <BISAccordion data={data.t5} />
